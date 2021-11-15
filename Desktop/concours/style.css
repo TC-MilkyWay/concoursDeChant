@@ -1,0 +1,145 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+ul,
+nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+
+/* Header */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 35px 100px 0;
+}
+
+header h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+header nav li {
+    margin: 0 15px;
+}
+
+header nav {
+    display: flex;
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+    header h2 {
+        margin-bottom: 15px;
+    }
+}
+
+body {
+    background-color: rgb(226, 225, 225);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #333;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer {
+    justify-content: center;
+    position: absolute;
+    display: block;
+    width: 1200px;
+    bottom: 0;
+}
+
+.boutons {
+    display: block;
+    margin-top: 10px;
+    float: left;
+}
+
+.contenu-footer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    padding: 20px 0 20px;
+    bottom: 10px;
+}
+
+.bloc {
+    width: 25%;
+    margin: 0 30px;
+}
+
+
+/*contact*/
+
+.footer-reseaux h3,
+.footer-contact h3,
+.footer-apropos h3,
+.footer-navigation h3 {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+
+/*services*/
+
+.liste-reseaux,
+.liste-contact,
+.liste-apropos,
+.liste-navigation {
+    list-style-type: none;
+}
+
+.liste-services li {
+    padding: 2px 0;
+}
+
+.liste-reseaux a,
+.liste-contact a,
+.liste-apropos a,
+.liste-navigation a {
+    text-decoration: none;
+    color: black;
+}

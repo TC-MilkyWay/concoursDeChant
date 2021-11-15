@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(226, 225, 225);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #333;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer {
+    flex-shrink: 0;
+    border: 3px inset black;
+    background: rgb(85, 196, 118);
+    color: black;
+    margin-bottom: 0;
+    padding-top: 20px;
+}
+
+.boutons {
+    display: block;
+    margin-top: 10px;
+    float: left;
+}
+
+.contenu-footer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    padding: 20px 0 20px;
+}
+
+.bloc {
+    width: 25%;
+    margin: 0 30px;
+}
+
+
+/*contact*/
+
+.footer-reseaux h3,
+.footer-contact h3,
+.footer-apropos h3,
+.footer-navigation h3 {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+
+/*services*/
+
+.liste-reseaux,
+.liste-contact,
+.liste-apropos,
+.liste-navigation {
+    list-style-type: none;
+}
+
+.liste-services li {
+    padding: 2px 0;
+}
+
+.liste-reseaux a,
+.liste-contact a,
+.liste-apropos a,
+.liste-navigation a {
+    text-decoration: none;
+    color: black;
+}

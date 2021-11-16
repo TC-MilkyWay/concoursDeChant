@@ -10,11 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/css/foundation.min.css" />
 </head>
 
 <body>
 
-    <header>
+<?php include_once('header.php'); ?>
+
+    <!-- <header>
 
         <h2>
             <a href="#"> <img class="site-title-img" src="/media/longuenesse.png"></a>
@@ -22,21 +25,44 @@
 
         <nav>
             <li><a href="#">Accueil</a></li>
-            <li><a href="#">Inscription</a></li>
+            <li><button class="button" data-open="exampleModal1">Inscription</button></li>
             <li><a href="#">Candidature</a></li>
             <li><a href="#">Connexion</a></li>
 
 
         </nav>
 
-    </header>
-
-    <div>
+    </header> -->
 
 
-    </div>
 
-    <footer>
+    <!-- <div>
+
+       <form>
+
+            <h1>Se connecter</h1>
+
+            <p class="choose-email">ou utiliser mon adresse e-mail :</p>
+
+            <div class="inputs">
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Mot de passe">
+            </div>
+
+            <p class="inscription">Je n'ai pas de <span>compte</span>. Je m'en <span>crée</span> un.</p>
+            <div align="center">
+                <button type="submit">Se connecter</button>
+            </div>
+        </form>
+
+
+
+
+    </div> -->
+
+
+
+    <!-- <footer>
 
 
         <div class="contenu-footer">
@@ -81,7 +107,9 @@
         </div>
 
 
-    </footer>
+    </footer> -->
+<?php include_once('footer.php'); ?>
+
 </body>
 
 </html>

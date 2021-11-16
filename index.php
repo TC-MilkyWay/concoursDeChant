@@ -17,6 +17,33 @@
 
 <?php include_once('header.php'); ?>
 
+<h1>Vous êtes passionnés de chant? Participez au concours de Longuenesse cet été.</h1>
+
+<article class="contenu">
+
+<p>Le premier concours de chant organisé par Longienesse  se tiendra le dimanche 1er août, a la salle.....
+ Un jury composé de plusieurs professionnels de la chanson sera présent pour révéler les talents de demain.
+</p>
+
+
+ <p>Vous aimez chanter et vous avez envie de découvrir le plaisir de la scène?  
+
+L'occasion vous est donnée de tenter votre chance cet été. </p>
+
+<p>Que vous soyez varois ou simplement de passage dans la région, participez à la première édition du concours "Révèle Ta Voix (e)", le 1er août, sur la scène du Théâtre de Verdure des Arcs-sur-Argens.
+
+Les candidats pourront concourir dans les catégories adultes, séniors ou encore auteurs-compositeurs, et ce dès l'âge de 7 ans, avec autorisation parentale pour les mineurs.</p>
+
+
+
+</article>
+
+
+<h4><a href="inscription.php">Inscription au concours</a></h4>
+
+</div>
+
+
     <!-- <header>
 
         <h2>
@@ -59,6 +86,17 @@
 
 
     </div> -->
+
+    <!-- <form method="post" id="formulaire" action="controller.php">
+
+      Name : <input type="text" name="name" placeholder="Entrez votre Nom" /><br />
+      Prénom : <input type="text" prénom="prénom" placeholder="Entrer votre Prénom" /><br/>
+      Téléphone : <input type="tel" id="phone" name="phone" placeholder="06-70-28-18-50" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required><br>
+      Email : <input type="email" name="email" placeholder="Entrer votre Email" /><br />
+
+      <input type="submit" value="Submit" />
+
+    </form> -->
 
 
 

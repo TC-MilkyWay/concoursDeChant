@@ -1,124 +1,137 @@
-/* General */
+/********************************** General *****************************/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .contenu {
-    background-color: rgb(201, 192, 192);
-    margin: 100px;
+  background-color: rgb(201, 192, 192);
+  margin: 100px;
 }
 
 html {
-    font: normal 16px sans-serif;
-    color: #555;
-    background-color: grey;
+  font: normal 16px sans-serif;
+  color: #555;
+  background-color: grey;
 }
 
 ul,
 nav {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    opacity: 0.9;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.9;
 }
 
 a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-
-/* Header */
+/***************************** Header *********************************/
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
-    padding: 35px 100px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 35px 100px 0;
 }
 
 header h2 {
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 header nav li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 header nav {
-    display: flex;
+  display: flex;
 }
 
 @media (max-width: 1000px) {
-    header {
-        padding: 20px 50px;
-    }
+  header {
+    padding: 20px 50px;
+  }
 }
 
 @media (max-width: 700px) {
-    header {
-        flex-direction: column;
-    }
-    header h2 {
-        margin-bottom: 15px;
-    }
+  header {
+    flex-direction: column;
+  }
+  header h2 {
+    margin-bottom: 15px;
+  }
 }
 
 body {
-    background-color: rgb(226, 225, 225);
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 150px;
-    margin-bottom: 0px;
-    color: #333;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(226, 225, 225);
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 150px;
+  margin-bottom: 0px;
+  color: #333;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+/*********************Main part *********************************/
+.main {
+  height: 100%;
+  margin-top: 20%;
+  margin-left: 0%;
 }
 
+/******************** Formulaire *******************************/
+.form-label {
+  padding-left: 30px;
+}
+.form-input {
+  justify-self: center;
+  width: 80%;
+  margin: auto, 0;
+}
+
+/******************** footer ***********************************/
 footer {
-    justify-content: center;
-    position: absolute;
-    display: block;
-    width: 1200px;
-    bottom: 0;
-    margin-left: 25%;
-    margin-top: 4px;
+  justify-content: center;
+  position: absolute;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .boutons {
-    display: block;
-    margin-top: 10px;
-    float: left;
+  display: block;
+  margin-top: 10px;
+  float: left;
 }
 
 .contenu-footer {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 16px;
-    padding: 20px 0 20px;
-    bottom: 10px;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 16px;
+  padding: 20px 0 20px;
+  bottom: 10px;
 }
 
 .bloc {
-    width: 25%;
-    margin: 0 30px;
+  width: 25%;
+  margin: 0 30px;
 }
-
 
 /*contact*/
 
@@ -126,10 +139,9 @@ footer {
 .footer-contact h3,
 .footer-apropos h3,
 .footer-navigation h3 {
-    font-size: 25px;
-    padding-bottom: 20px;
+  font-size: 25px;
+  padding-bottom: 20px;
 }
-
 
 /*services*/
 
@@ -137,88 +149,88 @@ footer {
 .liste-contact,
 .liste-apropos,
 .liste-navigation {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .liste-services li {
-    padding: 2px 0;
+  padding: 2px 0;
 }
 
 .liste-reseaux a,
 .liste-contact a,
 .liste-apropos a,
 .liste-navigation a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 form {
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 40px 60px;
-    border-radius: 10px;
-    min-width: 300px;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 40px 60px;
+  border-radius: 10px;
+  min-width: 300px;
 }
 
 form h1 {
-    color: #eb7371;
-    text-align: center;
+  color: #eb7371;
+  text-align: center;
 }
 
 form .social-media {
-    margin-top: -10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 form .social-media p {
-    padding: 5px;
-    width: 20px;
-    margin-left: 10px;
-    border-radius: 100%;
-    border: 1px solid #545454;
-    text-align: center;
-    cursor: pointer;
-    color: #545454;
+  padding: 5px;
+  width: 20px;
+  margin-left: 10px;
+  border-radius: 100%;
+  border: 1px solid #545454;
+  text-align: center;
+  cursor: pointer;
+  color: #545454;
 }
 
 form p.choose-email {
-    text-align: center;
+  text-align: center;
 }
 
 form .inputs {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-form .inputs input[type='email'],
-input[type='password'] {
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    outline: none;
-    margin-bottom: 15px;
+form .inputs input[type="email"],
+input[type="password"] {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  outline: none;
+  margin-bottom: 15px;
 }
 
 form p.inscription {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #878787;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #878787;
 }
 
 form p.inscription span {
-    color: #eb7371;
+  color: #eb7371;
 }
 
 form button {
-    padding: 15px 25px;
-    border-radius: 5px;
-    border: none;
-    font-size: 15px;
-    color: #fff;
-    background-color: #eb7371;
-    outline: none;
-    cursor: pointer;
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  color: #fff;
+  background-color: #eb7371;
+  outline: none;
+  cursor: pointer;
 }

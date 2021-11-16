@@ -17,21 +17,40 @@
 
 <?php include_once('header.php'); ?>
 
-
-<form method="post" id="formulaire" action="controller.php">
-
-      Name : <input type="text" name="name" placeholder="Entrez votre Nom" /><br />
-      Prénom : <input type="text" prénom="prénom" placeholder="Entrer votre Prénom" /><br/>
-      Téléphone : <input type="tel" id="phone" name="phone" placeholder="06-70-28-18-50" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required><br>
-      Email : <input type="email" name="email" placeholder="Entrer votre Email" /><br />
-      Pseudo : <input type="text" name="pseudo" placeholder="Entrer un pseudo" /><br/>
-      Password : <input type="" 
-
-      <input type="submit" value="Submit" />
-
+<div class="main">
+    <h2>Inscription au Site</h2>
+    <form method="post" id="formulaire" action="submit_inscription.php">
+        <div>
+            <label for="nom" class="form-label">Nom :</label>
+            <input type="text" class="form-input" name="name" placeholder="Entrez votre Nom"/>
+        </div>
+        <div>
+            <label for="prenom" class="form-label">Prénom : </label>
+            <input type="text" prénom="prénom" placeholder="Entrer votre Prénom" />
+        </div>
+        <div>
+            <label for="phone" class="form-label">Téléphone : </label>
+            <input type="tel" id="phone" name="phone" placeholder="06-70-28-18-50" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
+        </div>
+        <div>
+            <label for="email" class="form-label">Email : </label>
+            <input type="email" name="email" placeholder="Entrer votre Email" />
+            <i>Nous ne revendrons pas votre email.</i>
+        </div>
+        <div>
+            <label for="pseudo" class="form-label">Pseudo : </label>
+            <input type="text" name="pseudo" placeholder="Entrer un pseudo" />
+        </div>
+        <div>
+            <label for="password" class="form-label">Password : </label>
+            <input type="text" name="password" placeholder="Mot de passe" />
+            
+        </div>
+        <button type="submit" class="">Envoyer</button>
     </form>
+</div>
 
-    <?php include_once('footer.php'); ?>
+<?php include_once('footer.php'); ?>
 
 </body>
 

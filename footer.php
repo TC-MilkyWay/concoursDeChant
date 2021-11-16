@@ -1,6 +1,5 @@
 <footer>
 
-
         <div class="contenu-footer">
 
             <div class="bloc footer-reseaux">
@@ -34,13 +33,12 @@
                 <h3>🔹Navigation</h3>
                 <ul class="liste-navigation">
                     <li>
-                        <a href="#top"><img src="/media/top1.png" width="30px" height="30px" font-style="line-height:2px"></a>
+                        <a href="#top"><img src="./media/top1.png" width="30px" height="30px" font-style="line-height:2px"></a>
                     </li>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="concoursdechant.html">Concours de chant</a></li>
                 </ul>
             </div>
         </div>
-
 
     </footer>

@@ -7,12 +7,10 @@ if (!isset($_POST['nom']) || !isset($_POST['prenom']) || !isset($_POST['phone'])
     return;
 }	
 
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$pseudo = $_POST['pseudo'];
-$password = $_POST['password'];
+$chanson = $_POST['chanson'];
+$auteur = $_POST['auteur'];
+$interprete = $_POST['interprete'];
+$duree = $_POST['duree'];
 
 ?>
 
@@ -27,18 +25,17 @@ $password = $_POST['password'];
         <div class="container">
     
         <?php include_once('header.php'); ?>
-            <h1>Inscription bien reçu !</h1>
+            <h1>Inscription  au concours bien reçu !</h1>
             
             <div class="card">
                 
                 <div class="card-body">
                     <h5 class="card-title">Rappel de vos informations</h5>
-                    <p class="card-text"><b>Nom</b> : <?php echo($nom); ?></p>
-                    <p class="card-text"><b>Prénom</b> : <?php echo($prenom); ?></p>
-                    <p class="card-text"><b>Téléphone</b> : <?php echo($phone); ?></p>
-                    <p class="card-text"><b>Email</b> : <?php echo($email); ?></p>
-                    <p class="card-text"><b>Pseudo</b> : <?php echo($pseudo); ?></p>
-                    <p class="card-text"><b>Password</b> : <?php echo($password); ?></p>
+                    <p class="card-text"><b>Chanson</b> : <?php echo($chanson); ?></p>
+                    <p class="card-text"><b>Auteur</b> : <?php echo($auteur); ?></p>
+                    <p class="card-text"><b>Interprete</b> : <?php echo($interprete); ?></p>
+                    <p class="card-text"><b>Durée</b> : <?php echo($duree); ?></p>
+                   
                 </div>
             </div>
         </div>

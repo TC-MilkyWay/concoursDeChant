@@ -35,7 +35,9 @@
             
             Les candidats pourront concourir dans les catégories adultes, séniors ou encore auteurs-compositeurs, et ce dès l'âge de 7 ans, avec autorisation parentale pour les mineurs.</p>
         </article>
+        <div class="inscription">
         <h4><a href="inscription.php">Inscription au concours</a></h4>
+</div>
     </div>
     <?php include_once('footer.php'); ?>
 

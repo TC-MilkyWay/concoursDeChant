@@ -17,7 +17,7 @@
 
     <?php include_once('header.php'); ?>
     <div class="main">
-<p>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee <br>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
+
     </div>
     <?php include_once('footer.php'); ?>
 

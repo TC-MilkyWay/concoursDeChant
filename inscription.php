@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/css/foundation.min.css" /> -->
+    
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         </div>
         <div>
             <label for="prenom" class="form-label">Prénom : </label><br>
-            <input type="text" class="form-input" prénom="prenom" placeholder="Entrer votre Prénom" />
+            <input type="text" class="form-input" name="prenom" placeholder="Entrer votre Prénom" />
         </div>
         <div>
             <label for="phone" class="form-label">Téléphone : </label><br>

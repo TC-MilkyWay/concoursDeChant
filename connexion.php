@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/css/foundation.min.css" />
+    
 </head>
 
 <body>
 
     <?php include_once('header.php'); ?>
     <div class="main">
-
+<p>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee <br>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
     </div>
     <?php include_once('footer.php'); ?>
 

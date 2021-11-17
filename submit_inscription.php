@@ -1,11 +1,11 @@
 <?php
 
 // on vérifie que nos champs sont déclarés et qu'il sont non null
-if (!isset($_POST['nom']) || !isset($_POST['prenom']) || !isset($_POST['phone']) || !isset($_POST['email']) || !isset($_POST['pseudo']) || !isset($_POST['password']))
-{
-	echo('Il faut remplir tout les champs pour soumettre le formulaire.');
-    return;
-}	
+    // if (!isset($_POST['nom']) || !isset($_POST['prenom']) || !isset($_POST['phone']) || !isset($_POST['email']) || !isset($_POST['pseudo']) || !isset($_POST['password']))
+    // {
+    //     echo('Il faut remplir tout les champs pour soumettre le formulaire.');
+    //     return;
+    // }	
 
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
@@ -21,7 +21,8 @@ $password = $_POST['password'];
     <head>
         <meta charset="UTF-8">
         <title>Concours de chant - Demande d'inscription reçue</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        
     </head>
     <body>
         <div class="container">
@@ -34,7 +35,7 @@ $password = $_POST['password'];
                 <div class="card-body">
                     <h5 class="card-title">Rappel de vos informations</h5>
                     <p class="card-text"><b>Nom</b> : <?php echo($nom); ?></p>
-                    <p class="card-text"><b>Prénom</b> : <?php echo($prenom); ?></p>7
+                    <p class="card-text"><b>Prénom</b> : <?php echo($prenom); ?></p>
                     <p class="card-text"><b>Téléphone</b> : <?php echo($phone); ?></p>
                     <p class="card-text"><b>Email</b> : <?php echo($email); ?></p>
                     <p class="card-text"><b>Pseudo</b> : <?php echo($pseudo); ?></p>
@@ -42,5 +43,6 @@ $password = $_POST['password'];
                 </div>
             </div>
         </div>
+        <?php include_once('footer.php'); ?>
     </body>
 </html>

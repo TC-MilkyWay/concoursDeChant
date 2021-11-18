@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5deb2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:3306
--- Généré le : mar. 16 nov. 2021 à 09:12
--- Version du serveur :  8.0.27-0ubuntu0.20.04.1
--- Version de PHP : 7.4.3
+-- Host: localhost:3307
+-- Generation Time: Nov 18, 2021 at 11:11 AM
+-- Server version: 5.7.24
+-- PHP Version: 7.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,71 +18,78 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `CONCOURSCHANT`
+-- Database: `concourschant`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `CANDIDATURE`
+-- Table structure for table `candidature`
 --
 
-CREATE TABLE `CANDIDATURE` (
-  `ID` int NOT NULL,
+CREATE TABLE `candidature` (
+  `ID` int(11) NOT NULL,
   `CHANSON` varchar(255) NOT NULL,
   `AUTEUR` varchar(255) NOT NULL,
   `INTERPRETE` varchar(255) NOT NULL,
   `DUREE` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `UTILISATEUR`
+-- Table structure for table `utilisateur`
 --
 
-CREATE TABLE `UTILISATEUR` (
-  `ID` int NOT NULL,
+CREATE TABLE `utilisateur` (
+  `ID` int(11) NOT NULL,
   `NOM` varchar(100) NOT NULL,
   `PRENOM` varchar(100) NOT NULL,
   `EMAIL` varchar(255) NOT NULL,
   `DATENAISSANCE` date NOT NULL,
   `PSEUDO` varchar(100) NOT NULL,
   `PASSWORD` varchar(100) NOT NULL,
-  `ISADMIN` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `isAdmin` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Index pour les tables déchargées
+-- Dumping data for table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`ID`, `NOM`, `PRENOM`, `EMAIL`, `DATENAISSANCE`, `PSEUDO`, `PASSWORD`, `isAdmin`) VALUES
+(1, 'Denorme', 'Florent', 'deflo59@gmail.com', '1988-10-14', 'Xive', 'nimportcoa', 1);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `CANDIDATURE`
+-- Indexes for table `candidature`
 --
-ALTER TABLE `CANDIDATURE`
+ALTER TABLE `candidature`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `UTILISATEUR`
+-- Indexes for table `utilisateur`
 --
-ALTER TABLE `UTILISATEUR`
+ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `CANDIDATURE`
+-- AUTO_INCREMENT for table `candidature`
 --
-ALTER TABLE `CANDIDATURE`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+ALTER TABLE `candidature`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `UTILISATEUR`
+-- AUTO_INCREMENT for table `utilisateur`
 --
-ALTER TABLE `UTILISATEUR`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+ALTER TABLE `utilisateur`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

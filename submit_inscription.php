@@ -16,17 +16,30 @@ $password = $_POST['password'];
 
 ?>
 
-<?php $sqlquery = 'SELECT * FROM utilisateur';
- $usersStatement = $mysqlConnection->prepare($sqlquery);
- $usersStatement->execute();
- $users = $usersStatement->fetchall();
+<?php require "config/bdds.php";
 
+//Ecriture de la requete
+$sqlquery = 'INSERT INTO utilisateur(NOM, PRENOM, TELEPHONE, EMAIL, PSEUDO, PASWORD, isAdmin) VALUES (:nom, :prenom, :phone, :email, :pseudo, :pasword, :isAdmin)';
 
- foreach ($users as $user){
- ?>
-    <p><?php echo $user['NOM']; ?></p><?php
- }
+//Preparation de la requete
+$insertUser = $mysqlConnection->prepare($sqlquery);
+try{
+
+    // execution de la requete
+    $insertUser ->execute([
+        'nom' => $nom,
+        'prenom' => $prenom,
+        'phone' => $phone,
+        'email' => $email,
+        'pseudo' => $pseudo,
+        'pasword' => $password,
+        'isAdmin' => 0,
+    ]);
+}catch (Exception $e){
+    echo 'Impossible de traiter les données. Erreur : '.$e->getMessage();
+}
 ?>
+
 
 <!DOCTYPE html>
 <html>

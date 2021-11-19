@@ -37,9 +37,8 @@
             <input type="time" class="form-input" name="duree" placeholder="Entrer la durée de la bande son" /><br>    
         </div>
         <div>
-            <label for=
        
-        <button type="submit" class="">Envoyer</button>
+            <button type="submit" class="">Envoyer</button>
     </form>
 
 

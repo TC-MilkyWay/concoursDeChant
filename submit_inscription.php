@@ -16,6 +16,18 @@ $password = $_POST['password'];
 
 ?>
 
+<?php $sqlquery = 'SELECT * FROM utilisateur';
+ $usersStatement = $mysqlConnection->prepare($sqlquery);
+ $usersStatement->execute();
+ $users = $usersStatement->fetchall();
+
+
+ foreach ($users as $user){
+ ?>
+    <p><?php echo $user['NOM']; ?></p><?php
+ }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

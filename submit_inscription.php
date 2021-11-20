@@ -12,8 +12,10 @@ $prenom = $_POST['prenom'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 $pseudo = $_POST['pseudo'];
-$password = $_POST['password'];
-
+//hachage du password
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 14]);
+// code qui ne sert a rien: on vérifie que le mot de passe hacher correspond au mot de passe taper
+$dassword = password_verify($_POST['password'],$password);
 ?>
 
 <?php require "config/bdds.php";
@@ -40,32 +42,28 @@ try{
 }
 ?>
 
-<!-- 
+ 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Concours de chant - Demande d'inscription reçue</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
-    
         <?php include_once('header.php'); ?>
-            <h1>Inscription bien reçu !</h1>
-            
-            <div class="card">
+        <div class="main">
+            <h2>Inscription bien reçu !</h2>
                 
-                <div class="card-body">
-                    <h5 class="card-title">Rappel de vos informations</h5>
-                    <p class="card-text"><b>Nom</b> : <?php echo($nom); ?></p>
-                    <p class="card-text"><b>Prénom</b> : <?php echo($prenom); ?></p>
-                    <p class="card-text"><b>Téléphone</b> : <?php echo($phone); ?></p>
-                    <p class="card-text"><b>Email</b> : <?php echo($email); ?></p>
-                    <p class="card-text"><b>Pseudo</b> : <?php echo($pseudo); ?></p>
-                    <p class="card-text"><b>Password</b> : <?php echo($password); ?></p>
-                </div>
-            </div>
+            <h5>Rappel de vos informations</h5>
+            <p><b>Nom</b> : <?php echo($nom); ?></p>
+            <p><b>Prénom</b> : <?php echo($prenom); ?></p>
+            <p><b>Téléphone</b> : <?php echo($phone); ?></p>
+            <p><b>Email</b> : <?php echo($email); ?></p>
+            <p><b>Pseudo</b> : <?php echo($pseudo); ?></p>
+            <p><b>Password</b> : <?php echo($password); ?></p>
+            <p><b>VRAI password</b> : <?php echo($dassword); ?></p>
         </div>
+        <?php include_once('footer.php'); ?>
     </body>
-</html> -->
+</html>

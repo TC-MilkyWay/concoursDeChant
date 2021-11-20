@@ -18,13 +18,13 @@ $password = $_POST['password'];
 
 <?php require "config/bdds.php";
 
-//Ecriture de la requete
-$sqlquery = 'INSERT INTO utilisateur(NOM, PRENOM, TELEPHONE, EMAIL, PSEUDO, PASWORD, isAdmin) VALUES (:nom, :prenom, :phone, :email, :pseudo, :pasword, :isAdmin)';
-
-//Preparation de la requete
-$insertUser = $mysqlConnection->prepare($sqlquery);
 try{
-
+    //Ecriture de la requete
+    $sqlquery = 'INSERT INTO utilisateur(NOM, PRENOM, TELEPHONE, EMAIL, PSEUDO, PASWORD, isAdmin) VALUES (:nom, :prenom, :phone, :email, :pseudo, :pasword, :isAdmin)';
+    
+    //Preparation de la requete
+    $insertUser = $mysqlConnection->prepare($sqlquery);
+    
     // execution de la requete
     $insertUser ->execute([
         'nom' => $nom,
@@ -40,7 +40,7 @@ try{
 }
 ?>
 
-
+<!-- 
 <!DOCTYPE html>
 <html>
     <head>
@@ -68,4 +68,4 @@ try{
             </div>
         </div>
     </body>
-</html>
+</html> -->

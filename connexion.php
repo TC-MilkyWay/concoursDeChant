@@ -20,5 +20,7 @@
     </form>
   </div>
   <?php include_once('footer.php'); ?>
+  <script type="text/javascript" src="preview.js"></script>
+
 </body>
 </html>

@@ -13,7 +13,7 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $pseudo = $_POST['pseudo'];
 //hachage du password
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 14]);
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
 // code qui ne sert a rien: on vérifie que le mot de passe hacher correspond au mot de passe taper
 $dassword = password_verify($_POST['password'],$password);
 ?>

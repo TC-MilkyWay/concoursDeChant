@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 // on vérifie que nos champs sont déclarés et qu'il sont non null
@@ -19,7 +20,7 @@ require "config/bdds.php";
 try{
     //On insère les données reçues si les champs sont remplis
     if(!empty($chanson)  && !empty($auteur) && !empty($interprete)){
-        $sth = $mysqlConnection->prepare("INSERT INTO candidature(CHANSON, AUTEUR, INTERPRETE, DUREE) VALUES(:chanson, :auteur, :interprete, :duree)");
+        $sth = $mysqlConnection->prepare("INSERT INTO Candidature(chanson, auteur, interprete, duree) VALUES(:chanson, :auteur, :interprete, :duree)");
         $sth->bindParam(':chanson',$chanson);
         $sth->bindParam(':auteur',$auteur);
         $sth->bindParam(':interprete',$interprete);
@@ -41,7 +42,7 @@ try{
 
 
 <?php
-session_start();
+
      
     // Testons si le formulaire a bien été envoyé et s'il n'y a pas d'erreur
     if (isset($_FILES['inputFichier']) AND $_FILES['inputFichier']['error'] == 0 AND isset($_POST['categorieFichier']) AND isset($_POST['descriptionFichier']))

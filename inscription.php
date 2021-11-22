@@ -22,8 +22,12 @@
                 <input type="text" class="form-input" name="prenom" placeholder="Entrer votre Prénom" required />
             </div>
             <div>
+                <label for="naissance" class="form-label">Date de Naissance : </label><br>
+                <input type="date" class="form-input" name="naissance" placeholder="Entrer votre Date de naissance" required />
+            </div>
+            <div>
                 <label for="phone" class="form-label">Téléphone : </label><br>
-                <input type="tel" class="form-input" id="phone" name="phone" placeholder="06-70-28-18-50" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
+                <input type="tel" class="form-input" id="phone" name="phone" placeholder="0670281850" pattern="(0|(\\+33)|(0033))[1-9][0-9]{8}" required>
             </div>
             <div>
                 <label for="email" class="form-label">Email : </label><br>

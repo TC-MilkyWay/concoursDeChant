@@ -9,11 +9,12 @@ if (!isset($_POST['nom']) || !isset($_POST['prenom']) || !isset($_POST['phone'])
 
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
+$naissance = $_POST['naissance'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 $pseudo = $_POST['pseudo'];
 //hachage du password
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 14]);
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
 // code qui ne sert a rien: on vérifie que le mot de passe hacher correspond au mot de passe taper
 $dassword = password_verify($_POST['password'],$password);
 ?>
@@ -22,7 +23,7 @@ $dassword = password_verify($_POST['password'],$password);
 
 try{
     //Ecriture de la requete
-    $sqlquery = 'INSERT INTO utilisateur(NOM, PRENOM, TELEPHONE, EMAIL, PSEUDO, PASWORD, isAdmin) VALUES (:nom, :prenom, :phone, :email, :pseudo, :pasword, :isAdmin)';
+    $sqlquery = 'INSERT INTO Utilisateur(nom, prenom, dateDeNaissance, telephone, email, pseudo, pass, isAdmin) VALUES (:nom, :prenom, :dateDeNaissance, :phone, :email, :pseudo, :pass, :isAdmin)';
     
     //Preparation de la requete
     $insertUser = $mysqlConnection->prepare($sqlquery);
@@ -31,10 +32,11 @@ try{
     $insertUser ->execute([
         'nom' => $nom,
         'prenom' => $prenom,
+        'dateDeNaissance' => $naissance,
         'phone' => $phone,
         'email' => $email,
         'pseudo' => $pseudo,
-        'pasword' => $password,
+        'pass' => $password,
         'isAdmin' => 0,
     ]);
 }catch (Exception $e){

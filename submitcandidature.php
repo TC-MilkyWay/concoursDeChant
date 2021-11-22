@@ -17,7 +17,7 @@ require "config/bdds.php";
 try{
     //On insère les données reçues si les champs sont remplis
     if(!empty($chanson)  && !empty($auteur) && !empty($interprete)){
-        $sth = $mysqlConnection->prepare("INSERT INTO candidature(CHANSON, AUTEUR, INTERPRETE, DUREE) VALUES(:chanson, :auteur, :interprete, :duree)");
+        $sth = $mysqlConnection->prepare("INSERT INTO Candidature(chanson, auteur, interprete, duree) VALUES(:chanson, :auteur, :interprete, :duree)");
         $sth->bindParam(':chanson',$chanson);
         $sth->bindParam(':auteur',$auteur);
         $sth->bindParam(':interprete',$interprete);

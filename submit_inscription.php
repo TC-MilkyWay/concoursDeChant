@@ -55,7 +55,7 @@ try{
             $mail->Host = 'smt.gmail.com';
             $mail->Port = 465;  
             $mail->Username = 'yohanngille@gmail.com';
-            $mail->Password = '08041985Yo!';   
+            $mail->Password = '';   
        
        //   $path = 'reseller.pdf';
        //   $mail->AddAttachment($path);
@@ -84,7 +84,7 @@ try{
         $from = 'yohanngille@gmail.com';
         $name = 'yoyoyo';
         $subj = 'PHPMailer 5.2 testing from DomainRacer';
-        $msg = 'This is mail about testing mailing using PHP.';
+        $msg = '';
         
         $error=smtpmailer($to,$from, $name ,$subj, $msg);
         

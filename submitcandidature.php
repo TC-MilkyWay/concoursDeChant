@@ -93,26 +93,26 @@ try{
             
         </div>
 
-
-        <?php require_once "submit_inscription.php";
-
-
+  <!-- code pour envoi mail confirmation  
+         
 
 
-			$destinataire = 'yohanngille@gmail.com';
-			$envoyeur	='yohanngille@yahoo.co.uk';
-     			$sujet = 'Email de confirmation';
-     			$message = "Bonjour !\r\nCeci est un email de confirmation.\r\n";
-	     		$headers = 'From: '.$envoyeur . "\r\n" .
-     				'Reply-To: '.$envoyeur. "\r\n" .
-     				'X-Mailer: PHP/' . phpversion();
-	     		$envoye = mail($destinataire, $sujet, $message, $headers);
-			if ($envoye)
-     				echo "<br />Email envoyé.";
-			else
-				echo "<br />Email refusé.";
-?> 
 
+
+			// $destinataire = 'yohanngille@gmail.com';
+			// $envoyeur	='yohanngille@yahoo.co.uk';
+     		// 	$sujet = 'Email de confirmation';
+     		// 	$message = "Bonjour !\r\nCeci est un email de confirmation.\r\n";
+	     	// 	$headers = 'From: '.$envoyeur . "\r\n" .
+     		// 		'Reply-To: '.$envoyeur. "\r\n" .
+     		// 		'X-Mailer: PHP/' . phpversion();
+	     	// 	$envoye = mail($destinataire, $sujet, $message, $headers);
+			// if ($envoye)
+     		// 		echo "<br />Email envoyé.";
+			// else
+			// 	echo "<br />Email refusé."; 
+?>  -->
+ 
 
 
         <h2>Maintenant insérer votre bande son </h2>
@@ -132,6 +132,9 @@ try{
                 <center><button type="submit" class="">Envoyer</button></center>
             </div>
         </form>
+
+<
+        
 
 
         <?php include_once('footer.php'); ?>

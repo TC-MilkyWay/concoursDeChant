@@ -6,7 +6,7 @@
 
   
 // Récupérer le contenu de la page Web à partir de l'url.
-$url = "http://88.136.33.102:5000/search?query=ultra%20vomit&type=artist&limit=25&method=direct"; 
+$url = "http://217.182.174.155:5000/search?query=ultra%20vomit&type=artist&limit=25&method=direct&fmt=json"; 
   
 // Initialisez une session CURL.
 $ch = curl_init();  
@@ -32,3 +32,9 @@ curl_close($ch);
 
 
 ?>
+
+
+
+
+
+http

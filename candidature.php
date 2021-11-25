@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -11,7 +12,7 @@
 <body>
     <?php include_once('header.php'); ?>
     <div class="main">
-        <form method="post" id="formulaire" action="submitcandidature.php">
+        <form method="post" id="formulaire" action="submitcandidature.php" enctype="multipart/form-data">
             <h2>Candidature au concours de chant</h2>
             <div>
                 <label for="chanson" class="form-label">Chanson :</label><br>
@@ -29,7 +30,12 @@
                 <label for="duree" class="form-label">Durée de la bande son: </label><br>
                 <input type="time" class="form-input" name="duree" placeholder="Entrer la durée de la bande son" /><br>    
             </div>
+            <label for="file" class="form-label">Sélectionner le fichier audio à envoyer( mp3, wav) 5mb max :</label>
+            <input type="file" class="form-input" id="inputFichier"  name="inputFichier" accept=".mp3, .wav" placeholder="Entrer votre fichier audio mp3,wav 5mb max" /></br>
             <div>
+            <div class="preview">
+            <p>Aucun fichier sélectionné pour le moment</p>
+            </div>   
                 <center><button type="submit" class="">Envoyer</button></center>
             </div>
         </form>

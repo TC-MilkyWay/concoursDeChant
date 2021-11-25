@@ -1,18 +1,22 @@
-<?php 
+<?php session_start();
+
+
 require  "config/bdds.php";
 $recherchemail = $mysqlConnection->prepare("SELECT * FROM utilisateur WHERE email = ?");
 $recherchemail->execute([$_POST['login']]);
 $utilisateur = $recherchemail->fetch();
+$_SESSION['pseudo'] = $utilisateur['pseudo'];
+$pseudo = $_SESSION['pseudo'];
 
 if ($utilisateur && password_verify($_POST['mdp'], $utilisateur['pass']))
 {
-  echo "valid";
-
+  echo "Bonjour et Bienvenue $pseudo";
+  
 }else{
   echo "invalid";
 }
+ ?>
 
-  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +28,7 @@ if ($utilisateur && password_verify($_POST['mdp'], $utilisateur['pass']))
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
   </head>
 <body>
-  <!--include_once('header.php'); -->
+  <?php include_once('header.php'); ?>
   <div class="main">
     <form method="post" action="" >  
       <h1>Se connecter</h1>    

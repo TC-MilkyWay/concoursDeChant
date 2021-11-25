@@ -21,7 +21,8 @@
             
             <p>Vous aimez chanter et vous avez envie de découvrir le plaisir de la scène?  
             
-            L'occasion vous est donnée de tenter votre chance cet été. </p>
+            L'occasion vous est donnée de tenter votre chance cet été.!!!!!!!!!! </p>
+            drfgergtregerer
             
             <p>Que vous soyez varois ou simplement de passage dans la région, participez à la première édition du concours "Révèle Ta Voix (e)", le 1er août, sur la scène du Théâtre de Verdure des Arcs-sur-Argens.
             

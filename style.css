@@ -1,193 +1,210 @@
 /********************************** General *****************************/
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .contenu {
-  margin: 100px;
+    margin: 100px;
 }
 
 html {
-  font: normal 16px sans-serif;
-  background-color: #faebd7;
+    font: normal 16px sans-serif;
+    background-color: #faebd7;
 }
 
-p{
-  padding:15px 0px
+p {
+    padding: 15px 0px
 }
 
 ul,
 nav {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  opacity: 0.9;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 a:hover {
-  opacity: 1;
+    opacity: 1;
 }
+
 
 /***************************** Header *********************************/
 
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
-  padding: 35px 100px 0;
-  background-color: rgb(201, 192, 192);
-  border-bottom: 2px solid #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 35px 100px 0;
+    background-color: rgb(201, 192, 192);
+    border-bottom: 2px solid #000;
 }
 
 header h2 {
-  font-family: "Quicksand", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 
 header nav li {
-  margin: 0 15px;
+    margin: 0 15px;
 }
 
 header nav {
-  display: flex;
+    display: flex;
 }
 
 @media (max-width: 1000px) {
-  header {
-    padding: 20px 50px;
-  }
+    header {
+        padding: 20px 50px;
+    }
 }
 
 @media (max-width: 700px) {
-  header {
-    flex-direction: column;
-  }
-  header h2 {
-    margin-bottom: 15px;
-  }
+    header {
+        flex-direction: column;
+    }
+    header h2 {
+        margin-bottom: 15px;
+    }
 }
 
 body {
-  /* background-color: rgb(201, 192, 192); */
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 150px;
-  margin-bottom: 0px;
-  color: #333;
-  font-size: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    /* background-color: rgb(201, 192, 192); */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    color: #333;
+    font-size: 20px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
+
 /*********************Main part *********************************/
+
 .main {
-  height: 100%;
-  margin-top: 20%;
-  margin-left: 0%;
+    /*height: 100%;*/
+    margin-top: 20%;
+    margin-left: 0%;
 }
+
 
 /******************** Formulaire *******************************/
+
 .form-label {
-  padding-left: 30px;
+    padding-left: 30px;
 }
+
 .form-input {
-  justify-self: center;
-  width: 70%;
-  margin-left: 5%;
+    justify-self: center;
+    width: 70%;
+    margin-left: 5%;
 }
 
-i{
-  font-size: small;
-  margin-left: 5%;
+i {
+    font-size: small;
+    margin-left: 5%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
-.connexion{
-  display: grid;
-  justify-content:center;
-  flex-direction: columns;
-  background-color: #f5f5f5;
-  font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.connexion {
+    display: grid;
+    justify-content: center;
+    flex-direction: columns;
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
 }
+
 form {
-  margin: 5%;
-  align-items: center;
-  background-color: #fff;
-  padding: 40px 60px;
-  border-radius: 10px;
-  box-shadow: 8px 8px 12px #777;
-  min-width: 300px;
+    margin: 5%;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 12px #777;
+    min-width: 300px;
 }
-form h2, form h1, h2{
-  color: #eb7371;
-  text-align:center;
-  padding: 20px 0px;
+
+form h2,
+form h1,
+h2 {
+    color: #eb7371;
+    text-align: center;
+    padding: 20px 0px;
 }
+
 form .inputs {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
-form input{
-  padding: 15px;
-  border:none;
-  border-radius: 5px;
-  background-color:#f2f2f2;
-  outline:none;
-  margin-bottom: 15px;
+
+form input {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    outline: none;
+    margin-bottom: 15px;
 }
-button{
-  padding: 15px 25px;
-  border-radius: 5px;
-  border:none;
-  font-size: 15px;
-  color: #fff;
-  background-color: #eb7371;
-  outline:none;
-  cursor:pointer;
+
+button {
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #eb7371;
+    outline: none;
+    cursor: pointer;
 }
+
 
 /******************** footer ***********************************/
+
 footer {
-  background-color: rgb(201, 192, 192);
-  justify-content: center;
-  border-top: 2px solid #000;
-  position: absolute;
-  display: block;
-  width: 100%;
-  margin-top: 20px;
+    background-color: rgb(201, 192, 192);
+    justify-content: center;
+    border-top: 2px solid #000;
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .boutons {
-  display: block;
-  margin-top: 10px;
-  float: left;
+    display: block;
+    margin-top: 10px;
+    float: left;
 }
 
 .contenu-footer {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  font-size: 0.8em;
-  padding: 20px 0 20px;
-  bottom: 10px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 0.8em;
+    padding: 20px 0 20px;
+    bottom: 10px;
 }
 
 .bloc {
-  width: 25%;
-  margin: 0 15px;
+    width: 25%;
+    margin: 0 15px;
 }
+
 
 /*contact*/
 
@@ -195,10 +212,11 @@ footer {
 .footer-contact h3,
 .footer-apropos h3,
 .footer-navigation h3 {
-  font-size: 1em;
-  padding-bottom: 20px;
-  font-weight: bolder;
+    font-size: 1em;
+    padding-bottom: 20px;
+    font-weight: bolder;
 }
+
 
 /*services*/
 
@@ -206,17 +224,17 @@ footer {
 .liste-contact,
 .liste-apropos,
 .liste-navigation {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .liste-services li {
-  padding: 2px 0;
+    padding: 2px 0;
 }
 
 .liste-reseaux a,
 .liste-contact a,
 .liste-apropos a,
 .liste-navigation a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }

@@ -1,7 +1,8 @@
+
 <?php session_start();
 
-
 require  "config/bdds.php";
+
 $recherchemail = $mysqlConnection->prepare("SELECT * FROM utilisateur WHERE email = ?");
 $recherchemail->execute([$_POST['login']]);
 $utilisateur = $recherchemail->fetch();
@@ -37,16 +38,13 @@ if ($utilisateur && password_verify($_POST['mdp'], $utilisateur['pass']))
         <input type="email" name="login" placeholder="email">
         
         <input type="password" name="mdp" placeholder="pass">
-        <input type="submit" name="formconnexion" value="Se connecter !" />
+        <center><button type="submit">Se connecter</button></center>
       </div>
     </form>
   </div>
   <?php include_once('footer.php'); ?>
 </body>
 </html>
-
-
-
 
 
 <?php
@@ -62,4 +60,5 @@ if ($utilisateur && password_verify($_POST['mdp'], $utilisateur['pass']))
 //   }
 
 ?>
+
 

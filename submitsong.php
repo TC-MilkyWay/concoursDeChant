@@ -36,7 +36,8 @@
             <h2>musique bien reçu !</h2>
                 
             <h5>Rappel de vos informations</h5>
-            <p><b>musique</b> : <?php echo('$file'); ?></p>
+
+            
            
         </div>
         <?php include_once('footer.php'); ?>

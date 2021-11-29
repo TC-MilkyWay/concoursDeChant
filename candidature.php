@@ -20,8 +20,10 @@
                 <input type="text" class="form-input" name="chanson" placeholder="Entrez votre chanson ici"/>
             </div>
             <div>
-                <label for="auteur" class="form-label">Auteur : </label><br>
-                <input type="text" class="form-input" name="auteur" placeholder="Entrer le nom de l'auteur" />
+                <label for="artists" class="form-label">Auteur : </label><br>
+                <input list="artists" id="queryArtists" class="form-input/>
+                <datalist name="artists" id="artists">              </datalist>  
+                
             </div>
             <div>
                 <label for="interprete" class="form-label">Interprete, Chanteur : </label><br>
@@ -38,7 +40,12 @@
         </form>
     
     </div>
+
+    <script src="/preview.js"></script>
     <?php include_once('footer.php'); ?>
+    
 </body>
 
 </html>
+
+

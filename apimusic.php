@@ -25,6 +25,7 @@ curl_setopt($ch, CURLOPT_URL, $url);
 $result = curl_exec($ch); 
 
 //Afficher le résultat
+
 //echo $result;
 
 curl_close($ch);
@@ -42,10 +43,3 @@ for ($i=0; $i < 25; $i++) {
 //echo $array["count"];
 //echo $array["artists"][0]["name"];
 
-
-
-
-
-
-
-?>

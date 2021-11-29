@@ -15,7 +15,8 @@ $duree= $_POST['duree'];
 
 
 
-require "config/bdds.php";           
+require "config/bdds.php"; 
+require "apimusic.php";          
 
 try{
     //On insère les données reçues si les champs sont remplis
@@ -39,6 +40,8 @@ try{
 
  */  
 ?> 
+
+
 
 
 
@@ -83,7 +86,7 @@ try{
     <body>
         <?php include_once('header.php'); ?>
         <div class="main">
-            <h2>Inscription bien reçu !</h2>
+            <h2>valider votre choix dans la liste ci dessous !</h2>
                 
             <h5>Rappel de vos informations</h5>
             <p><b>Chanson</b> : <?php echo($chanson); ?></p>
@@ -92,6 +95,12 @@ try{
             <p><b>Durée</b> : <?php echo($duree); ?></p>
             
         </div>
+
+
+        <div>
+
+        
+
 
   <!-- code pour envoi mail confirmation  
          
@@ -128,6 +137,9 @@ try{
             <div class="preview">
             <p>Aucun fichier sélectionné pour le moment</p>
             </div> 
+            <div>
+            <audio controls preload="auto" src="./assos.mp3"> reecouter votre morceau  pour etre sur. </audio>
+            </div>
             <div>
                 <center><button type="submit" class="">Envoyer</button></center>
             </div>

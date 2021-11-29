@@ -42,12 +42,6 @@ for ($i=0; $i < 25; $i++) {
 //echo $array["count"];
 //echo $array["artists"][0]["name"];
 
-
-
-
-
-
-
 ?>
 
 

@@ -238,3 +238,31 @@ footer {
     text-decoration: none;
     color: black;
 }
+
+/******************** API **************************************/
+.grille {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  *
+  .adiv {
+    background-color: #777;
+    border-radius: 15px;
+  }
+  
+  .apidiv1 {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+  .apidiv2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+  }
+  
+  .apidiv3 {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }

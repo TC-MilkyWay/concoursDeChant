@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function Envoyer() {
+            alert('requete');
+
+            //instanciation de la requête
+            var xmlhttp = new XMLHttpRequest();
+            // Fonction associée à un retour de réponse du serveur
+            xmlhttp.onreadystatechange = function() {
+                // Si il y a eu une réponse du serveur valide
+                if (this.readyState == 4 && this.status == 200) {
+                    // ajout de la réponse sur l'élément html "texte"
+                    document.getElementById("texte").innerHTML = this.responseText;
+                }
+            }
+
+            str = "http://217.182.174.155:5000/ws/2/artist/?query=artist:${replaced}&limit=25&offset=0&fmt=json";
+            // préparation d'envoie de la requête
+            xmlhttp.open("GET", "apimusic.php?value=" + str, true);
+            xmlhttp.send();
+
+        }
+    </script>
+</head>
+
+<body>
+    <p><b>Cliquez sur le bouton:</b></p>
+    <input id="clickMe" type="button" value="clickme" onclick="Envoyer();" />
+    <p>retour: <span id="texte"></span></p>
+</body>
+
+</html>

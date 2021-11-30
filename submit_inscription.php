@@ -17,8 +17,6 @@ $email = $_POST['email'];
 $pseudo = $_POST['pseudo'];
 //hachage du password
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
-// code qui ne sert a rien: on vérifie que le mot de passe hacher correspond au mot de passe taper
-$dassword = password_verify($_POST['password'],$password);
 ?>
 
 <?php require "config/bdds.php";
@@ -29,8 +27,8 @@ try{
         $recherchemail ->execute(array($email));
         $userexist = $recherchemail->rowCount();
         if($userexist == 1) {
-          echo "erreur il email déjà utilisé.";
-          catch
+        echo "erreur il email déjà utilisé.";
+            throw(e); 
         }else{
           echo " est ce qu'on verra ce message quelque part";
         }

@@ -1,11 +1,13 @@
+<link rel="stylesheet" href="style.css">
 <?php
 //require "PHPMailer/PHPMailerAutoload.php";
 require "config/bdds.php";
 $dateMin = 2004-01-01;
+$majeur = "";
 
 try{
     // on vérifie que nos champs sont déclarés et qu'il sont non null
-    if (isset($_POST['nom'], $_POST['prenom'], $_POST['phone'], $_POST['email'], $_POST['pseudo'], $_POST['password'])) {
+    if (isset($_POST['nom'], $_POST['prenom'], $_POST['naissance'], $_POST['phone'], $_POST['email'], $_POST['password'])) {
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
         $naissance = $_POST['naissance'];
@@ -15,6 +17,25 @@ try{
         //hachage du password
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
         
+        //vérifier que le nom ne contient que des lettres de a-z A-Z et chffres de 0-9
+        if (preg_match("/\W/", $nom )) {
+            throw new Exception ("Les signes particuliers ne sont pas accéptées.");
+        }
+        
+        // vérifier que la date de naissance soit entre 1900 et 2099
+        if (preg_match("/^((19|20)[0-9]{2})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/", $naissance)) {
+            // vérifier que le participant soit né avant le 1 janvier 2004 
+            if ($naissance > $dateMin) {
+                throw new Exception("il faut être majeur pour participer.");
+            }else {
+                //else a enlever ainsi que dans le html
+                $majeur = "vous êtes majeur pas de problèmes.";
+            }
+        } else {
+            throw new Exception ("cette date de Naisance $naissance n'est pas valable.");
+        }
+
+        //vérifier qu'il ny ait pas de doublons d'emails
         if(!empty($email)) {
             $recherchemail = $mysqlConnection->prepare("SELECT * FROM utilisateur WHERE email= ? ");
             $recherchemail ->execute(array($email));
@@ -26,10 +47,8 @@ try{
 
     }else {
         throw new Exception ('Il faut remplir tout les champs pour soumettre le formulaire.');
-    
     }	
     
-
     //Ecriture de la requete
     $sqlquery = 'INSERT INTO Utilisateur(nom, prenom, dateDeNaissance, telephone, email, pseudo, pass, isAdmin) VALUES (:nom, :prenom, :dateDeNaissance, :phone, :email, :pseudo, :pass, :isAdmin)';
     
@@ -53,20 +72,24 @@ try{
         <head>
             <meta charset="UTF-8">
             <title>Concours de chant - Demande d'inscription reçue</title>
-            <link rel="stylesheet" href="style.css">
         </head>
         <body>
             <?php include_once('header.php'); ?>
             <div class="main">
-                <h2>Inscription bien reçu !</h2>
-                    
-                <h5>Rappel de vos informations</h5>
-                <p><b>Nom</b> : <?php echo($nom); ?></p>
-                <p><b>Prénom</b> : <?php echo($prenom); ?></p>
-                <p><b>Date de Naissance</b> : <?php echo($naissance);?></p>
-                <p><b>Téléphone</b> : <?php echo($phone); ?></p>
-                <p><b>Email</b> : <?php echo($email); ?></p>
-                <p><b>Pseudo</b> : <?php echo($pseudo); ?></p>
+                <!--ne pas oublier d'enlever le tu es majeur ci dessous!!! -->
+                <h3><?php echo $majeur?></h3>
+                <div class="grille">
+                    <div class="cardinscription adiv">
+                        <h2>Inscription bien reçu !</h2>
+                        <h5>Rappel de vos informations</h5>
+                        <p><b>Nom</b> : <?php echo($nom); ?></p>
+                        <p><b>Prénom</b> : <?php echo($prenom); ?></p>
+                        <p><b>Date de Naissance</b> : <?php echo($naissance);?></p>
+                        <p><b>Téléphone</b> : <?php echo($phone); ?></p>
+                        <p><b>Email</b> : <?php echo($email); ?></p>
+                        <p><b>Pseudo</b> : <?php echo($pseudo); ?></p>
+                    </div>
+                </div>
             </div>
             <?php include_once('footer.php'); ?>
         </body>
@@ -74,10 +97,12 @@ try{
     </html>
 <?php
 }catch (Exception $e){
-    echo $e->getMessage();     
-    
+    include_once('header.php');
+    echo "<div class='main'><h1>";
+    echo $e->getMessage();  
+    echo "</h1></div>";
+    //sleep(10);
     //header('Location: inscription.php');
+    include_once('footer.php');
 }
 ?>
-
- 

@@ -96,7 +96,7 @@ body {
 
 .main {
     /*height: 100%;*/
-    margin-top: 20%;
+    margin-top: 10%;
     margin-left: 0%;
 }
 
@@ -239,7 +239,6 @@ footer {
     color: black;
 }
 
-
 /******************** API **************************************/
 
 .grille {
@@ -270,6 +269,15 @@ footer {
     grid-row: 1 / 3;
 }
 
+/******************récap d'inscription *************************/
+.cardinscription {
+    background-color: #ff7;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding-left: 10px;
+    grid-column: 2 ;
+    grid-row: 2 ;
+}
 
 /******************** page lecture bdd **************************************/
 

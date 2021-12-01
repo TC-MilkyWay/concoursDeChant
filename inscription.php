@@ -23,7 +23,7 @@
             <h2>Inscription au Site</h2>
             <div>
                 <label for="nom" class="form-label">Nom :</label><br>
-                <input type="text" class="form-input" name="nom" placeholder="Entrez votre Nom" required/>
+                <input type="text" class="form-input" name="nom" placeholder="Entrez votre Nom"W required/>
             </div>
             <div>
                 <label for="prenom" class="form-label">Prénom : </label><br>

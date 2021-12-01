@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -21,8 +20,8 @@
             </div>
             <div>
                 <label for="artists" class="form-label">Auteur : </label><br>
-                <input list="artists" id="queryArtists" class="form-input/>
-                <datalist name="artists" id="artists">              </datalist>  
+                <input list="artists" id="queryArtists" class="form-input"/>
+                
                 
             </div>
             <div>
@@ -41,7 +40,7 @@
     
     </div>
 
-    <script src="/preview.js"></script>
+    
     <?php include_once('footer.php'); ?>
     
 </body>

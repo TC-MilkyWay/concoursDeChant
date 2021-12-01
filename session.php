@@ -2,7 +2,7 @@
 
 require  "config/bdds.php";
 
-$recherchemail = $mysqlConnection->prepare("SELECT * FROM utilisateur WHERE email = ?");
+$recherchemail = $mysqlConnection->prepare("SELECT * FROM Utilisateur WHERE email = ?");
 $recherchemail->execute([$_POST['login']]);
 $utilisateur = $recherchemail->fetch();
 $pseudo = $_SESSION['pseudo'];

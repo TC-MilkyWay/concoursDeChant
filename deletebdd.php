@@ -1,26 +1,44 @@
 <?php
-include 'functions.php';
+//function pour se connecter a la base.. afaire:utiliser notrez fichier bdds.php
+function pdo_connect_mysql() {
+    $DATABASE_HOST = 'localhost';
+    $DATABASE_USER = 'root';
+    $DATABASE_PASS = 'password';
+    $DATABASE_NAME = 'tp_Chant_G3';
+    try {
+    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+    } catch (PDOException $exception) {
+    	// si un probleme, message d'erreur
+    	exit('Probleme de connexion!');
+    }
+}
+
+?>
+<?php include('/concoursDeChant/session.php'); ?>
+
+
+<?php
 $pdo = pdo_connect_mysql();
 $msg = '';
-// Check that the contact ID exists
+// verifier que l'utilisateur existe
 if (isset($_GET['id'])) {
-    // Select the record that is going to be deleted
-    $stmt = $pdo->prepare('SELECT * FROM contacts WHERE id = ?');
+    // selectionner ce qui va etre supprimer
+    $stmt = $pdo->prepare('SELECT * FROM utilisateur WHERE id = ?');
     $stmt->execute([$_GET['id']]);
     $contact = $stmt->fetch(PDO::FETCH_ASSOC);
-    if (!$contact) {
+    if (!$utilisateur) {
         exit('Contact doesn\'t exist with that ID!');
     }
-    // Make sure the user confirms beore deletion
+    // confirmation de la suppression
     if (isset($_GET['confirm'])) {
         if ($_GET['confirm'] == 'yes') {
-            // User clicked the "Yes" button, delete record
+            // si on click sur yes ca supprime
             $stmt = $pdo->prepare('DELETE FROM contacts WHERE id = ?');
             $stmt->execute([$_GET['id']]);
             $msg = 'You have deleted the contact!';
         } else {
-            // User clicked the "No" button, redirect them back to the read page
-            header('Location: read.php');
+            // si on click sur non , on se redirge vers la lecture de la base de données
+            header('Location: lecturebdd.php');
             exit;
         }
     }

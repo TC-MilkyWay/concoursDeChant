@@ -1,6 +1,8 @@
 
 <?php
 
+require "config/bdds.php";
+
 // on vérifie que nos champs sont déclarés et qu'il sont non null
 if (!isset($_POST['chanson']) || !isset($_POST['auteur']) || !isset($_POST['interprete']) || !isset($_POST['duree']))
 {
@@ -15,7 +17,7 @@ $duree= $_POST['duree'];
 
 
 
-require "config/bdds.php"; 
+ 
          
 
 try{
@@ -54,31 +56,6 @@ try{
             <p><b>Durée</b> : <?php echo($duree); ?></p>
             
         </div>
-
-
-        
-
-        
-
- 
-         
-
-
-
-
-			<!-- // $destinataire = 'yohanngille@gmail.com';
-			// $envoyeur	='yohanngille@yahoo.co.uk';
-     		// 	$sujet = 'Email de confirmation';
-     		// 	$message = "Bonjour !\r\nCeci est un email de confirmation.\r\n";
-	     	// 	$headers = 'From: '.$envoyeur . "\r\n" .
-     		// 		'Reply-To: '.$envoyeur. "\r\n" .
-     		// 		'X-Mailer: PHP/' . phpversion();
-	     	// 	$envoye = mail($destinataire, $sujet, $message, $headers);
-			// if ($envoye)
-     		// 		echo "<br />Email envoyé.";
-			// else
-			// 	echo "<br />Email refusé."; 
-  -->
 
 
         <h2>Maintenant insérer votre bande son </h2>

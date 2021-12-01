@@ -35,6 +35,19 @@ $occurence=$array["count"];
 //echo $occurence;
 
 ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concours de chant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<?php include_once('header.php'); ?>
 <div class="grille">
   <div class="apidiv1 adiv">
     <form method="get" id="formulaire" action="" enctype="multipart/form-data">
@@ -62,3 +75,6 @@ $occurence=$array["count"];
     }?>
   </div>
 </div>
+<?php include_once('footer.php'); ?>
+  </body>
+  </html>

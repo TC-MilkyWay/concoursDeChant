@@ -19,8 +19,8 @@
                 <input type="text" class="form-input" name="chanson" placeholder="Entrez votre chanson ici"/>
             </div>
             <div>
-                <label for="artists" class="form-label">Auteur : </label><br>
-                <input list="artists" id="queryArtists" class="form-input"/>
+                <label for="auteur" class="form-label">Auteur : </label><br>
+                <input list="auteur" id="queryArtists" name="auteur" class="form-input"/>
                 
                 
             </div>

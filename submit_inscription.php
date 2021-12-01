@@ -124,6 +124,7 @@ try{
             <p><b>Password</b> : <?php echo($password); ?></p>
             <p><b>VRAI password</b> : <?php echo($dassword); ?></p>
         </div>
+        <center><button onclick="window.location.href = 'apimusic.php';"  class="" >Passer à votre candidature</button></center>
         <?php include_once('footer.php'); ?>
     </body>
 

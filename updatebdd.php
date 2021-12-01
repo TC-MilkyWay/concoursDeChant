@@ -31,7 +31,7 @@ if (isset($_GET['id'])) {
         // modifier les champs
         $stmt = $pdo->prepare('UPDATE Utilisateur SET id = ?, nom = ?, prenom = ?, dateDeNaissance = ?, telephone = ?, email = ?, pseudo = ?, WHERE id = ?');
         $stmt->execute([$id, $nom, $prenom, $dateDeNaissance, $telephone, $email, $pseudo, $_GET['id']]);
-        $msg = 'modifier avec succes!!!';
+        $msg = 'Modifié avec succes!!!';
     }
     // recuperer utilisateur dans la table utilisateur
     $stmt = $pdo->prepare('SELECT * FROM Utilisateur WHERE id = ?');
@@ -62,7 +62,7 @@ if (isset($_GET['id'])) {
          
 
 <div class="update">
-	<h2 class="message">Modifier les informations de l'utilisateur séléctionné. #<?=$Utilisateur['id']?></h2>
+	<h2 class="message">Modifiez les informations de l'utilisateur <?=$Utilisateur['pseudo']?></h2>
     <form action="updatebdd.php?id=<?=$Utilisateur['id']?>" method="post">
         <label for="id" class="form-label">ID</label>
         <label for="nom" class="form-label">Nom</label>

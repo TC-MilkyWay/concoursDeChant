@@ -7,7 +7,7 @@
 }
 
 .contenu {
-    margin: 100px;
+    margin: 0px;
 }
 
 html {
@@ -96,7 +96,7 @@ body {
 
 .main {
     /*height: 100%;*/
-    margin-top: 20%;
+    margin-top: 12%;
     margin-left: 0%;
 }
 
@@ -248,6 +248,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    margin-bottom: 100px;
 }
 
 .adiv {
@@ -486,7 +487,7 @@ footer {
 }
 
 .message {
-    font-size: 36px;
+    font-size: 24px;
     text-align: center;
     background-color: #376ab7;
     color: white;

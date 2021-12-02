@@ -1,22 +1,29 @@
 <?php session_start();
 
 require  "config/bdds.php";
-$pseudo = '';
 
-if (isset($_POST['mail'], $_POST['mdp'])) {
-  
+
+if (isset($_POST['mail'], $_POST['mdp'])) { //isset pour verifier que les champs soit validés
+ 
+  $mail = $_POST['mail']; //creation des variables pour les conserver sur les autres pages
+  $mdp = $_POST['mdp'];
+
+  //demande à mysql si il y a une correspondance 
   $recherchemail = $mysqlConnection->prepare("SELECT * FROM utilisateur WHERE email = ?");
-  $recherchemail->execute([$_POST['mail']]);
-  $utilisateur = $recherchemail->fetch();
+  $recherchemail->execute([$_POST['mail']]); 
+  $utilisateur = $recherchemail->fetch(); 
   
+  //verification si le mot de passe corresponds au mdp de la BDD
   if ($utilisateur && password_verify($_POST['mdp'], $utilisateur['pass']))
   {
+    //creation de la variable pseudo 
     $pseudo = $utilisateur['pseudo'];
     $_SESSION['pseudo'] = $pseudo;
     
     
   }else{
     echo "mot de passe incorrect";
+    $pseudo = '';
   }
   if ($utilisateur['isAdmin'] == false) {
  

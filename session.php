@@ -11,80 +11,10 @@ $pseudo = $_SESSION['pseudo'];
 if ($utilisateur && password_verify($_POST['mdp'], $utilisateur['pass']))
 {
   $_SESSION['pseudo'] = $utilisateur['pseudo'];
+  header('Location: candidature.php');
   
 }else{
   echo "invalid";
 }
  ?>
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
- Bonjour <?php echo $pseudo; ?> !
+ 

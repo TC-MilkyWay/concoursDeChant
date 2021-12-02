@@ -57,6 +57,10 @@ header h2 {
     font-family: "Quicksand", sans-serif;
 }
 
+header h3 {
+    font-family: "Quicksand", sans-serif;
+}
+
 header nav li {
     margin: 0 15px;
 }
@@ -140,6 +144,12 @@ form {
 form h2,
 form h1,
 h2 {
+    color: #eb7371;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+h3 {
     color: #eb7371;
     text-align: center;
     padding: 20px 0px;

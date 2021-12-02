@@ -13,6 +13,9 @@
     <?php include_once('header.php'); ?>
     <div class="main">
         <article class="contenu">
+
+           <center><h3>Bonjour et bienvenue <?php echo $pseudo?>,  </h3></center>
+
             <h2>Vous êtes passionnés de chant? Participez au concours de Longuenesse cet été.</h2>
         
             <p>Le premier concours de chant organisé par Longienesse  se tiendra le dimanche 1er août, a la salle.....

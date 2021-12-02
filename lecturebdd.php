@@ -6,8 +6,9 @@ function pdo_connect_mysql() {
     $DATABASE_USER = 'root';
     $DATABASE_PASS = 'root';
     $DATABASE_NAME = 'tp_Chant_g3';
+    $DATABASE_PORT = '3307';
     try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+    	return new PDO('mysql:host=' . $DATABASE_HOST . ';port=' . $DATABASE_PORT . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
     } catch (PDOException $exception) {
     	// si un probleme, message d'erreur
     	exit('Probleme de connexion!');

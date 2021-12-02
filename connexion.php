@@ -18,7 +18,7 @@
       <h1>Se connecter</h1>    
       <div class="inputs">
       <?php include_once('header.php'); ?>
-        <input type="email" name="login" placeholder="email">
+        <input type="email" name="mail" placeholder="email">
         
         <input type="password" name="mdp" placeholder="pass">
         <center><button type="submit">Se connecter</button></center>

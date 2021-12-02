@@ -1,10 +1,12 @@
 <?php session_start();
-
+var_dump($_SESSION);
 require  "config/bdds.php";
 $recherchemail = $mysqlConnection->prepare("SELECT * FROM utilisateur WHERE email = ?");
 $recherchemail->execute([$_POST['login']]);
 $utilisateur = $recherchemail->fetch();
-$pseudo = $_SESSION['pseudo'];
+//$pseudo = $_SESSION['pseudo'];
+$_SESSION['pseudo'] = $_POST['login'];
+
 
 
 if ($utilisateur && password_verify($_POST['mdp'], $utilisateur['pass']))

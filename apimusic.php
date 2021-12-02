@@ -36,8 +36,21 @@ $occurence=$array["count"];
 //echo $occurence;
 
 ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concours de chant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<?php include_once('header.php'); ?>
 <div class="grille">
-  <div class="apidiv1 adiv">1
+  <div class="apidiv1 adiv">
     <form method="get" id="formulaire" action="" enctype="multipart/form-data">
       <div>
         <label for="artists" class="form-label">Artiste: </label><br>
@@ -50,10 +63,10 @@ $occurence=$array["count"];
       <center><button type="submit" class="">Envoyer</button></center>
     </form>
   </div>
-  <div class="apidiv2 adiv">2
+  <div class="apidiv2 adiv">
     <h2>Validation</h2>
   </div>
-  <div class="apidiv3 adiv">3
+  <div class="apidiv3 adiv">
     <h2>Resultat</h2>
     <label for="artists">Choisis le chanteur:</label><br>
     <?php for ($i=0; $i < 5; $i++) { 
@@ -62,6 +75,7 @@ $occurence=$array["count"];
       echo "<hr>";
     }?>
   </div>
-
 </div>
-
+<?php include_once('footer.php'); ?>
+  </body>
+  </html>

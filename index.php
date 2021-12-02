@@ -30,10 +30,11 @@
             <p>Que vous soyez varois ou simplement de passage dans la région, participez à la première édition du concours "Révèle Ta Voix (e)", le 1er août, sur la scène du Théâtre de Verdure des Arcs-sur-Argens.
             
             Les candidats pourront concourir dans les catégories adultes, séniors ou encore auteurs-compositeurs, et ce dès l'âge de 7 ans, avec autorisation parentale pour les mineurs.</p>
-            
+
+            <input type="checkbox" name="cgu" id="cgu">
+            <a href="cgu.php">Veuillez accepter les CGU avant toute inscription au site</a>
             <center><button><a href="inscription.php">Inscription au concours</a></button></center>
 
-            </form>
         </article>
     </div>
     <?php include_once('footer.php'); ?>

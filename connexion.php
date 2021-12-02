@@ -28,20 +28,3 @@
   <?php include_once('footer.php'); ?>
 </body>
 </html>
-
-
-<?php
-//   if(!empty($email)) {
-//     $recherchemail = $mysqlConnection->prepare("SELECT * FROM utilisateur WHERE email= ? ");
-//     $recherchemail ->execute(array($email));
-//     $userexist = $recherchemail->rowCount();
-//     if($userexist == 1) {
-//      echo "concordance";
-//     }else{
-//       echo " non concordance";
-//     }
-//   }
-
-?>
-
-

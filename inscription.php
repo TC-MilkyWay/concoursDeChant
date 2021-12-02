@@ -11,11 +11,19 @@
 <body>
     <?php include_once('header.php'); ?>
     <div class="main">
+
+    <?php if (isset($e)) {
+        require_once('submit_inscription.php');
+        echo "<h2>".$e."</h2>";
+    } else {
+        echo "";
+    } ?>
+
         <form method="post" id="formulaire" action="submit_inscription.php">
             <h2>Inscription au Site</h2>
             <div>
                 <label for="nom" class="form-label">Nom :</label><br>
-                <input type="text" class="form-input" name="nom" placeholder="Entrez votre Nom" required/>
+                <input type="text" class="form-input" name="nom" placeholder="Entrez votre Nom"W required/>
             </div>
             <div>
                 <label for="prenom" class="form-label">Prénom : </label><br>
@@ -32,7 +40,7 @@
             <div>
                 <label for="email" class="form-label">Email : </label><br>
                 <input type="email" class="form-input" name="email" placeholder="Entrer votre Email" required /><br>
-                <i>Nous ne revendrons pas votre email.</i>
+                <i>Un seul email valable par candidature.</i>
             </div>
             <div>
                 <label for="pseudo" class="form-label">Pseudo : </label><br>

@@ -1,6 +1,8 @@
 
 <?php
 
+require "config/bdds.php";
+
 // on vérifie que nos champs sont déclarés et qu'il sont non null
 if (!isset($_POST['chanson']) || !isset($_POST['auteur']) || !isset($_POST['interprete']) || !isset($_POST['duree']))
 {
@@ -15,8 +17,8 @@ $duree= $_POST['duree'];
 
 
 
-require "config/bdds.php"; 
-require "apimusic.php";          
+ 
+         
 
 try{
     //On insère les données reçues si les champs sont remplis
@@ -32,52 +34,11 @@ try{
 }catch (Exception $e){
     echo 'Impossible de traiter les données. Erreur : '.$e->getMessage();
 }
+?>
 
-/*if ((isset($_FILES['audiofile']['temp_name'])&&($_FILES['audiofile']['error'] == UPLOAD_ERR_OK))) {     
-    $chemin_destination = '/concoursDeChant/mediautilisateur';     
-    move_uploaded_file($_FILES['audiofile']['tmp_name'], $chemin_destination.$_FILES['audiofile']['name']);     
-    }     
+<!DOCTYPE html>
+<html lang="fr">
 
- */  
-?> 
-
-
-
-
-
-
-  <!--   
-    // Testons si le formulaire a bien été envoyé et s'il n'y a pas d'erreur
-  /*  if (isset($_FILES['inputFichier']) AND $_FILES['inputFichier']['error'] == 0 AND isset($_POST['categorieFichier']) AND isset($_POST['descriptionFichier']))
-    {
-        $categorieFichier = $_POST['categorieFichier'];
-        $descriptionFichier = $_POST['descriptionFichier'];
- 
-        // Testons si le fichier n'est pas trop gros
-        if ($_FILES['inputFichier']['size'] <= 1000000)
-        {
-            // Testons si l'extension est autorisée
-            $infosfichier = pathinfo($_FILES['inputFichier']['name']);
-            $extension_upload = $infosfichier['extension'];
-            $extensions_autorisees = array('mp3', 'wav');
- 
-            // Si l'extension du fichier envoyé correspond à une de celles du tableau des extensions autorisées
-            if (in_array($extension_upload, $extensions_autorisees))
-            {  
-                if ($categorieFichier == 'musique')
-                {
-                    // On peut valider le fichier et le stocker définitivement
-                    move_uploaded_file($_FILES['inputFichier']['tmp_name'], '/home/yohann/concoursDeChant/mediautilisateur '. basename($_FILES['inputFichier']['name']));
- 
-                    $cheminFichier = '/home/yohann/concoursDeChant/mediautilisateur '.$_FILES['inputFichier']['name'];
-                }
- 
-                
-                ?>
- 
-            -->
-
-<html>
     <head>
         <meta charset="UTF-8">
         <title>Concours de chant</title>
@@ -97,33 +58,6 @@ try{
         </div>
 
 
-        <div>
-
-        
-
-
-  <!-- code pour envoi mail confirmation  
-         
-
-
-
-
-			// $destinataire = 'yohanngille@gmail.com';
-			// $envoyeur	='yohanngille@yahoo.co.uk';
-     		// 	$sujet = 'Email de confirmation';
-     		// 	$message = "Bonjour !\r\nCeci est un email de confirmation.\r\n";
-	     	// 	$headers = 'From: '.$envoyeur . "\r\n" .
-     		// 		'Reply-To: '.$envoyeur. "\r\n" .
-     		// 		'X-Mailer: PHP/' . phpversion();
-	     	// 	$envoye = mail($destinataire, $sujet, $message, $headers);
-			// if ($envoye)
-     		// 		echo "<br />Email envoyé.";
-			// else
-			// 	echo "<br />Email refusé."; 
-?>  -->
- 
-
-
         <h2>Maintenant insérer votre bande son </h2>
 
         <form method="post" id="formulaire" action="submitsong.php"  enctype="multipart/form-data"> 
@@ -138,14 +72,14 @@ try{
             <p>Aucun fichier sélectionné pour le moment</p>
             </div> 
             <div>
-            <audio controls preload="auto" src="./assos.mp3"> reecouter votre morceau  pour etre sur. </audio>
+            <audio controls preload="auto" src="./kassos.mp3"> reecouter votre morceau  pour etre sur. </audio>
             </div>
             <div>
                 <center><button type="submit" class="">Envoyer</button></center>
             </div>
         </form>
 
-<
+
         
 
 

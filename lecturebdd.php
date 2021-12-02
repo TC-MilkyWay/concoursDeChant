@@ -23,7 +23,7 @@ $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] :
 $records_per_page = 10;
             
             // preparer er recuperer les infos depuis notre table Utilisateur
-$stmt = $pdo->prepare('SELECT * FROM Utilisateur ORDER BY id LIMIT :current_page, :record_per_page');
+$stmt = $pdo->prepare('SELECT * FROM utilisateur ORDER BY id LIMIT :current_page, :record_per_page');
 $stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
 $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
 $stmt->execute();
@@ -31,7 +31,7 @@ $stmt->execute();
 $Utilisateur = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // recuperer le nombre d'utilisateurs pour savoir si 1 ou plusieurs page. encore a pofiner
-$num_Utilisateur = $pdo->query('SELECT COUNT(*) FROM Utilisateur')->fetchColumn();
+$num_Utilisateur = $pdo->query('SELECT COUNT(*) FROM utilisateur')->fetchColumn();
 ?>
 <!DOCTYPE html>
 <html>

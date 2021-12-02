@@ -50,7 +50,7 @@ try{
     }	
     
     //Ecriture de la requete
-    $sqlquery = 'INSERT INTO Utilisateur(nom, prenom, dateDeNaissance, telephone, email, pseudo, pass, isAdmin) VALUES (:nom, :prenom, :dateDeNaissance, :phone, :email, :pseudo, :pass, :isAdmin)';
+    $sqlquery = 'INSERT INTO utilisateur(nom, prenom, dateDeNaissance, telephone, email, pseudo, pass, isAdmin) VALUES (:nom, :prenom, :dateDeNaissance, :phone, :email, :pseudo, :pass, :isAdmin)';
     
     //Preparation de la requete
     $insertUser = $mysqlConnection->prepare($sqlquery);

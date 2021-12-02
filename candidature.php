@@ -14,7 +14,7 @@
     <?php include_once('header.php'); ?>
     <div class="main">
     
-    <h3> Prochaine étape <?php echo $pseudo ?>, déposer votre candidature juste ici : </h3>
+    <h3> Prochaine étape , déposer votre candidature juste ici : </h3>
     
     <form method="post" id="formulaire" action="submitcandidature.php" enctype="multipart/form-data">
             

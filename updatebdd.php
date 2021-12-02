@@ -1,21 +1,7 @@
 <?php
-//function pour se connecter a la base.. afaire:utiliser notrez fichier bdds.php
-function pdo_connect_mysql() {
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'password';
-    $DATABASE_NAME = 'tp_Chant_G3';
-    try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-    } catch (PDOException $exception) {
-    	// si un probleme, message d'erreur
-    	exit('Probleme de connexion!');
-    }
-}
+//conexion a la base de donnée
+include  "config/bdds.php";
 
-?>
-<?php 
-$pdo = pdo_connect_mysql();
 $msg = '';
 // verifier si l'utilisateur existe, 
 if (isset($_GET['id'])) {
@@ -29,12 +15,12 @@ if (isset($_GET['id'])) {
         $email = isset($_POST['email']) ? $_POST['email'] : '';
         $pseudo = isset($_POST['pseudo']) ? $_POST['pseudo'] : '';
         // modifier les champs
-        $stmt = $pdo->prepare('UPDATE Utilisateur SET id = ?, nom = ?, prenom = ?, dateDeNaissance = ?, telephone = ?, email = ?, pseudo = ?, WHERE id = ?');
+        $stmt = $mysqlConnection->prepare('UPDATE utilisateur SET id = ?, nom = ?, prenom = ?, dateDeNaissance = ?, telephone = ?, email = ?, pseudo = ?, WHERE id = ?');
         $stmt->execute([$id, $nom, $prenom, $dateDeNaissance, $telephone, $email, $pseudo, $_GET['id']]);
         $msg = 'Modifié avec succes!!!';
     }
     // recuperer utilisateur dans la table utilisateur
-    $stmt = $pdo->prepare('SELECT * FROM Utilisateur WHERE id = ?');
+    $stmt = $mysqlConnection->prepare('SELECT * FROM utilisateur WHERE id = ?');
     $stmt->execute([$_GET['id']]);
     $Utilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$Utilisateur) {

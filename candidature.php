@@ -1,3 +1,4 @@
+<?php include('session.php'); ?>
 
 <!DOCTYPE html>
 <html>
@@ -12,8 +13,12 @@
 <body>
     <?php include_once('header.php'); ?>
     <div class="main">
-        <form method="post" id="formulaire" action="submitcandidature.php" enctype="multipart/form-data">
-            <h2>Candidature au concours de chant</h2>
+    
+    <h3> Prochaine étape <?php echo $pseudo ?>, déposer votre candidature juste ici : </h3>
+    
+    <form method="post" id="formulaire" action="submitcandidature.php" enctype="multipart/form-data">
+            
+        <h2>Candidature au concours de chant</h2>
             <div>
                 <label for="chanson" class="form-label">Chanson :</label><br>
                 <input type="text" class="form-input" name="chanson" placeholder="Entrez votre chanson ici"/>

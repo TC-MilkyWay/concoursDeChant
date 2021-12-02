@@ -1,20 +1,19 @@
+<?php include('session.php'); ?>
 <?php
 //function pour se connecter a la base.. afaire:utiliser notrez fichier bdds.php
 function pdo_connect_mysql() {
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'password';
-    $DATABASE_NAME = 'tp_Chant_G3';
+    $DATABASE_PASS = 'root';
+    $DATABASE_NAME = 'tp_Chant_g3';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
     } catch (PDOException $exception) {
     	// si un probleme, message d'erreur
     	exit('Probleme de connexion!');
     }
-}
+} ?>
 
-?>
-<?php include('session.php'); ?>
 
 <?php $pdo = pdo_connect_mysql();
 // recuperer la page via GET

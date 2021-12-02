@@ -6,10 +6,11 @@ $artisttest = str_replace(' ','%20',$_GET['queryArtists']);
 $musictest = str_replace(' ','%20',$_GET['querySongs']);
 //echo $artisttest;
 
-
 // Récupérer le contenu de la page Web à partir de l'url.
 //$url = "http://217.182.174.155:5000/ws/2/artist/?query=artist:${replaced}&limit=25&offset=0&fmt=json"; 
+
 $url = "217.182.174.155:5000/ws/2/recording/?query=${musictest}%20and%20artist:${artisttest}&limit=5&fmt=json";
+
 
 // Initialisez une session CURL.
 $ch = curl_init();

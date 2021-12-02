@@ -1,7 +1,9 @@
 <?php
  session_start();
 
-  echo "deconnexion réussie ";
-  session_destroy();   // détruit la session
+ setcookie ("mail", "", time() - 3600);
+ //unsetcookie('mail');
+ 
+  // détruit la session
   header("Location: connexion.php");
 ?>

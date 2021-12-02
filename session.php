@@ -19,7 +19,7 @@ if (isset($_POST['mail'], $_POST['mdp'])) { //isset pour verifier que les champs
     //creation de la variable pseudo 
     $pseudo = $utilisateur['pseudo'];
     $_SESSION['pseudo'] = $pseudo;
-    
+    setcookie('mail', $mail, time() + 365*24*3600, null, null, false, true);
     
   }else{
     echo "mot de passe incorrect";

@@ -1,3 +1,4 @@
+<?php include('cookie.php'); ?>
 <!DOCTYPE html>
 <html>
 

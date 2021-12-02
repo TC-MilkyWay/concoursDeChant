@@ -1,4 +1,5 @@
-<?php include('session.php'); ?>
+<?php include('cookie.php'); ?>
+
 <?php
 //function pour se connecter a la base.. afaire:utiliser notrez fichier bdds.php
 function pdo_connect_mysql() {
@@ -47,7 +48,7 @@ $num_Utilisateur = $pdo->query('SELECT COUNT(*) FROM utilisateur')->fetchColumn(
     <?php include_once('header.php'); ?>
     <div class="main">
         <article class="contenu">
-        <h3>Bonjour <?php echo $pseudo?>, </h3>   
+        <h3>Bonjour <?php echo $echomail?>, </h3>   
         <h2>base de données utilisateurs</h2>
 
         <div class="content read">

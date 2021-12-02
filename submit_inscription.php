@@ -27,9 +27,6 @@ try{
             // vérifier que le participant soit né avant le 1 janvier 2004 
             if ($naissance > $dateMin) {
                 throw new Exception("il faut être majeur pour participer.");
-            }else {
-                //else a enlever ainsi que dans le html
-                $majeur = "vous êtes majeur pas de problèmes.";
             }
         } else {
             throw new Exception ("cette date de Naisance $naissance n'est pas valable.");
@@ -76,8 +73,6 @@ try{
         <body>
             <?php include_once('header.php'); ?>
             <div class="main">
-                <!--ne pas oublier d'enlever le tu es majeur ci dessous!!! -->
-                <h3><?php echo $majeur?></h3>
                 <div class="grille">
                     <div class="cardinscription adiv">
                         <h2>Inscription bien reçu !</h2>

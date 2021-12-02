@@ -1,5 +1,5 @@
 <?php include('session.php');
-require "config/bdds.php";
+include "config/bdds.php";
 
 
 // recuperer la page via GET
@@ -32,7 +32,7 @@ $num_Utilisateur = $mysqlConnection->query('SELECT COUNT(*) FROM utilisateur')->
     <?php include_once('header.php'); ?>
     <div class="main">
         <article class="contenu">
-        <h3>Bonjour <?php echo $pseudo?>, </h3>   
+        <h3>Bonjour <?php echo $echomail?>, </h3>   
         <h2>base de données utilisateurs</h2>
 
         <div class="content read">

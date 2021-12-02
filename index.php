@@ -1,4 +1,5 @@
-<?php include('session.php'); ?>
+<?php include('cookie.php'); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +15,7 @@
     <div class="main">
         <article class="contenu">
 
-           <center><h3>Bonjour et bienvenue <?php echo $pseudo?>,  </h3></center>
+           <center><h3>Bonjour et bienvenue <?php echo $echomail ?>,  </h3></center>
 
             <h2>Vous êtes passionnés de chant? Participez au concours de Longuenesse cet été.</h2>
         

@@ -27,7 +27,17 @@
         </article>
     </main>
     <aside>
-        <?php include('connexion.php') ?>
+    <div id="connexion">
+<?php if ((isset($_SESSION['pseudo'])) && (!empty($_SESSION['pseudo'])))
+{
+include('connecte.php');
+}
+else
+{
+include('connexion.php');
+}
+?>
+</div>
     </aside>
     <?php include_once('footer.php'); ?>
 </body>

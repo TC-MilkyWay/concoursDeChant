@@ -26,7 +26,7 @@ include 'header.php';
       </div>
       <div class="apidiv3 adiv">
         <form for="valider" method="post" action="music.php">
-          <h2>1.Confirmez :</h2>
+          <h2>3.Confirmez :</h2>
           <input type="text" name="musiqueFinale" readonly id="valider"></p>
           <button type="submit" name="valider" >Je valide</button>
         </form>

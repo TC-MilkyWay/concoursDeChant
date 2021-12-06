@@ -26,7 +26,7 @@ if (isset($_POST['mail'], $_POST['mdp'])) { //isset pour verifier que les champs
   }
   if ($utilisateur['isAdmin'] == false) {
  
-    header('Location: candidature.php');
+    header('Location: api.php');
  
   } elseif ($utilisateur['isAdmin'] == true){
    

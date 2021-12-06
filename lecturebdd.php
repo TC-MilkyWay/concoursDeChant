@@ -1,4 +1,4 @@
-<?php include('session.php');
+<?php include('cookie.php');
 include "config/bdds.php";
 
 
@@ -40,6 +40,7 @@ $num_Utilisateur = $mysqlConnection->query('SELECT COUNT(*) FROM utilisateur')->
     <center><h3>Vous pouvez modifier ou supprimer les utilisateurs  ci dessous:</h3></center>
 	
 	<table>
+        <thead>
             <tr>
                 <td>#</td>
                 <td>Nom</td>

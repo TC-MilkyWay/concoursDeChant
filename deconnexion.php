@@ -5,5 +5,5 @@
  //unsetcookie('mail');
  
   // détruit la session
-  header("Location: connexion.php");
+  header("Location: index.php");
 ?>

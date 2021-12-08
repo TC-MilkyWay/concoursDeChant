@@ -3,7 +3,7 @@
 //require "PHPMailer/PHPMailerAutoload.php";
 require "config/bdds.php";
 $dateMin = 2004-01-01;
-$majeur = "";
+
 
 try{
     // on vérifie que nos champs sont déclarés et qu'il sont non null

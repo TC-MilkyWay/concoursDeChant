@@ -1,4 +1,30 @@
+<?php $chansonFinale= $_POST['chansonFinale'];
+$auteurFinal= $_POST['auteurFinal'];
 
+
+include './config/bdds.php';
+include 'cookie.php';
+
+
+$query = "SELECT id FROM utilisateur WHERE email = ?";
+$stmt = $mysqlConnection->prepare($query);
+$stmt->execute($_COOKIE['mail']);
+$idUtilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
+echo $idUtilisateur;
+
+
+
+$songquery = "INSERT INTO candidature (chanson, auteur, id_user) VALUE (:chanson, :auteur)";
+
+
+ $insertSong = $mysqlConnection->prepare($songquery);
+ $insertSong->execute([
+     'chanson' => $chansonFinale,
+     'auteur' => $auteurFinal,
+    
+ ]);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,15 +32,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma superbe page</title>
+    <title>CANDIDATURE Suite</title>
     <link rel="stylesheet" href="style.css">
     <script src="./assets/js/app.js" defer></script>
 </head>
 
 <body>
+    <?php include 'header.php'; ?>
     <h2>
         <?php
-        echo 'Résumé !';
+        echo  '<h2>Résumé !</h2>';
+        echo "<center><p>tu as choisi :".$chansonFinale." de ".$auteurFinal."</p><center>";
         ?>
     </h2>
     
@@ -32,7 +60,7 @@
             <source src="" />
         </audio>
     </div>
-
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

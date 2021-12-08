@@ -1,4 +1,5 @@
-let valider = document.getElementById("valider");
+let chansonFinale = document.getElementById("chansonFinale");
+let auteurFinal = document.getElementById("auteurFinal");
 
 function submitForm() {
   let titre = $("#titre").val();
@@ -18,5 +19,6 @@ function writeValid(x) {
   var cell1 = document.getElementById("titre" + x).innerHTML;
   var cell2 = document.getElementById("artiste" + x).innerHTML;
 
-  valider.value = cell1 + " - " + cell2;
+  chansonFinale.value = cell1;
+  auteurFinal.value = cell2;
 }

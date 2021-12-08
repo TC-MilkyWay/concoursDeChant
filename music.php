@@ -8,20 +8,18 @@ include 'cookie.php';
 
 $query = "SELECT id FROM utilisateur WHERE email = ?";
 $stmt = $mysqlConnection->prepare($query);
-$stmt->execute($_COOKIE['mail']);
+$stmt->execute(array($_COOKIE['mail']));
 $idUtilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
-echo $idUtilisateur;
 
 
 
-$songquery = "INSERT INTO candidature (chanson, auteur, id_user) VALUE (:chanson, :auteur)";
 
+$songquery = "UPDATE candidature SET chanson = '$chansonFinale', auteur = '$auteurFinal' WHERE email = '$echomail' ";
 
  $insertSong = $mysqlConnection->prepare($songquery);
  $insertSong->execute([
      'chanson' => $chansonFinale,
-     'auteur' => $auteurFinal,
-    
+     'auteur' => $auteurFinal    
  ]);
 
 ?>

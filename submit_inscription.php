@@ -63,6 +63,12 @@ try{
         'pass' => $password,
         'isAdmin' => 0,
     ]);
+    
+    $sqlquery2 = "INSERT INTO candidature (email) VALUES ('$email')";
+    $inserId = $mysqlConnection->prepare($sqlquery2);
+    $inserId -> execute();
+
+
     ?>
     <!DOCTYPE html>
     <html>

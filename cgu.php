@@ -11,7 +11,7 @@
 <body>
     <?php include_once('header.php'); ?>
     <div class="main">
-        <article class="contenu">
+        <center><article class="contenucgu"></center>
             <h2>Règlement du " Concours de chant Permanent "</h2>    
             <h3>ARTICLE 1 – ORGANISATION DU JEU</h3>
 

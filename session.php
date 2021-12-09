@@ -35,16 +35,5 @@ if (isset($_POST['mail'], $_POST['mdp'])) { //isset pour verifier que les champs
   
 }
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  ?>
  

@@ -70,7 +70,7 @@ try{
             <meta charset="UTF-8">
             <title>Concours de chant - Demande d'inscription reçue</title>
         </head>
-        <body>
+        <body>yu
             <?php include_once('header.php'); ?>
             <div class="main">
                 <div class="grille">
@@ -86,7 +86,11 @@ try{
                     </div>
                 </div>
             </div>
-            <center><a href="candidature.php">Maintenant, c'est le tour de votre candidature</a></center>
+            <div>
+                <form action="lecturebdd.php">
+            <center><input type="submit"class="form-input" value="retour à la base de données"></center>
+</div>
+</form>
             <?php include_once('footer.php'); ?>
         </body>
     

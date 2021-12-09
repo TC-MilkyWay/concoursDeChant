@@ -38,10 +38,15 @@ $num_Utilisateur = $mysqlConnection->query('SELECT COUNT(*) FROM utilisateur')->
         <div class="content read">
 	<h2>Utilisateurs enregistrés</h2>
     <center><h3>Vous pouvez modifier ou supprimer les utilisateurs  ci dessous:</h3></center>
+    <div>
+    <a href="creerbdd.php">
+    <center><input type="submit" class="buttonbdd" value="Créer un nouveau participant">
+    </a>
+</div>
 	
-	<table>
+<table class="center">
             <tr>
-                <td>#</td>
+                <td>id</td>
                 <td>Nom</td>
                 <td>Prénom</td>
                 <td>date de naissance</td>
@@ -81,10 +86,5 @@ $num_Utilisateur = $mysqlConnection->query('SELECT COUNT(*) FROM utilisateur')->
 </div>
 
             
-        
-    </div>
-    <?php include_once("footer.php"); ?>
-
-</body>
-
-</html>
+        </body>
+        </html>

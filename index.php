@@ -1,45 +1,76 @@
 <?php include('cookie.php'); ?>
 
 <!DOCTYPE html>
-<html>
+
+<html lang="fr">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Concours de chant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concours de chant Longuenesse</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
 </head>
+
 <body>
-    <?php include_once('header.php'); ?>
-    <div class="main">
-        <article class="contenu">
-
-           <center><h3>Bonjour et bienvenue <?php echo $echomail ?>,  </h3></center>
-
-            <h2>Vous êtes passionnés de chant? Participez au concours de Longuenesse cet été.</h2>
-        
-            <p>Le premier concours de chant organisé par Longienesse  se tiendra le dimanche 1er août, a la salle.....
-            Un jury composé de plusieurs professionnels de la chanson sera présent pour révéler les talents de demain.
-            </p>
-            
-            
-            <p>Vous aimez chanter et vous avez envie de découvrir le plaisir de la scène?  
-            
-            L'occasion vous est donnée de tenter votre chance cet été. </p>
-            
-            <p>Que vous soyez varois ou simplement de passage dans la région, participez à la première édition du concours "Révèle Ta Voix (e)", le 1er août, sur la scène du Théâtre de Verdure des Arcs-sur-Argens.
-            
-            Les candidats pourront concourir dans les catégories adultes, séniors ou encore auteurs-compositeurs, et ce dès l'âge de 7 ans, avec autorisation parentale pour les mineurs.</p>
-
-            <input type="checkbox" name="cgu" id="cgu">
-            <a href="cgu.php">Veuillez accepter les CGU avant toute inscription au site</a>
-            <center><button><a href="inscription.php">Inscription au concours</a></button></center>
-
-        </article>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
     </div>
-    <?php include_once('footer.php'); ?>
+    <?php include_once('header.php'); ?>
 
+    <!--accueil -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Bienvenue </div>
+                <div class="text-2">Concours de chant </div>
+                <div class="text-2">De Longuenesse </div>
+                <div class="text-1">Date jusqu'au Concours</div>
+                <h2 class="date"></h2>
+
+                <a href="#about">Inscription</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- a propos du concours -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">A propos du Concours</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="../media/BK2.jpg" alt="">
+                </div>
+                <div class="column right">
+                    <div class="contenu">
+
+                        <center>
+                            <h3>Bonjour et bienvenue
+                                <?php echo $echomail ?>, </h3>
+                        </center>
+
+                        <img src="../media/quoi.jpg" alt="">
+                        <a href="inscription.php">Inscription</a>
+
+                        
+                    </div>
+                </div>
+            </div>
+            
+    </section>
+
+
+    <!-- footer  -->
+    <?php include_once("footer.php"); ?>
+    <script src="script.js"></script>
+    <script src="compteur.js"></script>
+    
 </body>
 
 </html>

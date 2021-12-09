@@ -34,6 +34,6 @@ include 'header.php';
       </div>
     </div>
     <?php include 'footer.php'; ?>
-    <script src="./assets/js/app1.js"></script>
+    <script src="app1.js"></script>
   </body>
 </html>

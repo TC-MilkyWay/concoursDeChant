@@ -37,6 +37,7 @@
                 <a href="#about">Inscription</a>
             </div>
         </div>
+        <div class="elfsight-app-b88cf131-ad23-4f6f-9faa-2bc6964c9fb0"></div>
     </section>
 
     <!-- a propos du concours -->
@@ -64,12 +65,14 @@
             </div>
             
     </section>
+    
 
 
     <!-- footer  -->
     <?php include_once("footer.php"); ?>
     <script src="script.js"></script>
     <script src="compteur.js"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     
 </body>
 

@@ -1082,3 +1082,32 @@ footer span a:hover {
 .date {
     font-size: 75px;
 }
+
+
+/***************************submitsong*/
+
+.submitsong {
+    padding-top: 500px;
+    padding-bottom: 450px;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+/********************************************music.php********************/
+
+.music {
+    padding-top: 150px;
+    font-size: 50px;
+}
+
+
+/***********************************contact formulaire **************************/
+
+.contact {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 170px;
+    padding-left: 150px;
+    color: whitesmoke;
+}

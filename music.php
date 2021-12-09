@@ -43,21 +43,28 @@ $songquery = "UPDATE candidature SET chanson = '$chansonFinale', auteur = '$aute
         echo "<center><p>tu as choisi :".$chansonFinale." de ".$auteurFinal."</p><center>";
         ?>
     </h2>
-    
-    <div>
-        <form action="">
-            <fieldset>
-                <legend>Uploader votre music....</legend>
-                <input type="file" name="fileAudio" id="fileAudio" />
-            </fieldset>
-        </form>
-    </div>
+    <h2 class="music">Maintenant insérer votre bande son </h2>
 
-    <div>
-        <audio controls id="audioPreview" class="audioPreview">
-            <source src="" />
-        </audio>
-    </div>
+        <form method="post" id="formulaire" action="submitsong.php"  enctype="multipart/form-data"> 
+            
+            
+            <h2>Bande son</h2>
+            <div>
+            <label for="file" class="form-label">Sélectionner le fichier audio à envoyer( mp3, wav) mb max :</label>
+            <input type="file" class="form-input" id="fileAudio"  name="fileAudio" id="fileAudio" accept=".mp3, .wav" placeholder="Entrer votre fichier audio mp3,wav 5mb max" /></br>
+            </div>
+            <div class="preview">
+            <p>Réecoute ton morceau</p>
+            </div> 
+            <div>
+            <audio controls preload="auto" src="" id="audioPreview" name="audioPreview"> reecouter votre morceau  pour etre sur. </audio>
+            </div>
+            <div>
+                <center><button type="submit" class="">Envoyer</button></center>
+            </div>
+        </form>
+
+        <script src="app.js"></script>
     <?php include 'footer.php'; ?>
 </body>
 

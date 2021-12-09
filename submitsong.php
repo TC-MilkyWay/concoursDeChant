@@ -1,21 +1,21 @@
 <?php include('cookie.php'); ?>
 <?php
            // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
-           if (isset($_FILES['inputFichier']) && $_FILES['inputFichier']['error'] == 0)
+           if (isset($_FILES['fileAudio']) && $_FILES['fileAudio']['error'] == 0)
            {
                
         // Testons si le fichier n'est pas trop gros
-        if ($_FILES['inputFichier']['size'] <= 5000000)
+        if ($_FILES['fileAudio']['size'] <= 10000000)
         {
                 // Testons si l'extension est autorisée
-                $fileInfo = pathinfo($_FILES['inputFichier']['name']);
+                $fileInfo = pathinfo($_FILES['fileAudio']['name']);
                 $extension = $fileInfo['extension'];
                 $allowedExtensions = ['mp3', 'wav'];
                 if (in_array($extension, $allowedExtensions))
                 {
 
-            move_uploaded_file($_FILES['inputFichier']['tmp_name'], '/home/yohann/concoursDeChant/mediautilisateur/' . basename($_FILES['inputFichier']['name']));
-                        echo "L'envoi a bien été effectué !";
+            move_uploaded_file($_FILES['fileAudio']['tmp_name'], '/home/yohann/concoursDeChant/mediautilisateur/' . basename($_FILES['fileAudio']['name']));
+                        /*echo "L'envoi a bien été effectué !";*/
                 }}}
 
                  
@@ -31,9 +31,10 @@
     <body>
         <?php include_once('header.php'); ?>
         <div class="main">
-            <h2>musique bien reçu !</h2>
-                
-            <h5>Rappel de vos informations</h5>
+            
+        
+            <h5 class="submitsong">Candidature bien reçu!!</br>Vous n'avez plus qu'à attendre la validation de l'équipe!!</h5>
+            
 
             
            

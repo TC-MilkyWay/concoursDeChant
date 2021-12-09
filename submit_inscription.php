@@ -86,7 +86,7 @@ try{
                     </div>
                 </div>
             </div>
-            <center><a href="candidature.php">Maintenant, c'est le tour de votre candidature</a></center>
+            <center><a href="api.php">Maintenant, c'est le tour de votre candidature</a></center>
             <?php include_once('footer.php'); ?>
         </body>
     

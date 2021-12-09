@@ -25,7 +25,7 @@
                 <li><a href="deconnexion.php" class="menu-btn">Déconnexion</a></li>
                 <li><a href="cgu.php" class="menu-btn">Réglement</a></li>
 
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
+                <li><a href="contact.php" class="menu-btn">Contact</a></li>
                 
             </ul>
             <div class="menu-btn">

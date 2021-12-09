@@ -5,7 +5,7 @@ include "config/bdds.php";
 // recuperer la page via GET
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 // nombre d'entrees par page
-$records_per_page = 10;
+$records_per_page = 50;
             
             // preparer er recuperer les infos depuis notre table Utilisateur
 $stmt = $mysqlConnection->prepare('SELECT * FROM utilisateur ORDER BY id LIMIT :current_page, :record_per_page');
@@ -75,14 +75,7 @@ $num_Utilisateur = $mysqlConnection->query('SELECT COUNT(*) FROM utilisateur')->
             <?php endforeach; ?>
         </tbody>
     </table>
-	<div class="pagination">
-		<?php if ($page > 1): ?>
-		<a href="read.php?page=<?=$page-1?>"><i class="fas fa-angle-double-left fa-sm">⏮</i></a>
-		<?php endif; ?>
-		<?php if ($page*$records_per_page < $num_Utilisateur): ?>
-		<a href="read.php?page=<?=$page+1?>"><i class="fas fa-angle-double-right fa-sm">⏭</i></a>
-		<?php endif; ?>
-	</div>
+	
 </div>
 
             

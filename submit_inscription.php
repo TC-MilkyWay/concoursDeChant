@@ -103,7 +103,7 @@ try{
     echo $e->getMessage();  
     echo "</h1></div>";
     //sleep(10);
-    //header('Location: inscription.php');
+    header('Location: inscription.php');
     include_once('footer.php');
 }
 ?>
